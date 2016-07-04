@@ -28,6 +28,9 @@ tags:
 # clone 代码
 git clone https://github.com/BurnishTechCN/BurnishTechCN.github.io.git blog
 
+# 更新git submodule管理的主题
+git submodule update --init --recursive
+
 # 安装依赖
 cd blog && git checkout source && npm install
 
