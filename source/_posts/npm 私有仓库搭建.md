@@ -4,6 +4,7 @@ permalink: build-private-npm-repository-server
 tags:
 ---
 
+<!-- more -->
 
 ## 为什么搭建私有的 npm 仓库
 * 发布和管理公司内部的私有的、暂不公开的 npm 包

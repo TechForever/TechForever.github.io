@@ -4,6 +4,8 @@ permalink: use-Hexo
 tags:
 ---
 
+<!-- more -->
+
 ## 为什么用Hexo
 
 1.  静态博客，部署在github上，不需要数据库，部署和迁移方便
