@@ -1,5 +1,6 @@
 title: Atom - The hackable text editor
 date: 2016-07-27 17:11:03
+permalink: Atom-The-hackable-text-editor
 tags:
 ---
 

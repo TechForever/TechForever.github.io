@@ -1,5 +1,6 @@
 title: 使用Hexo写博客
 date: 2016-07-04 14:05:08
+permalink: use-Hexo
 tags:
 ---
 

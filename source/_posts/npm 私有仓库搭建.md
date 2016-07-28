@@ -1,5 +1,6 @@
 title: npm 私有仓库搭建
 date: 2016-07-26 13:38:31
+permalink: build-private-npm-repository-server
 tags:
 ---
 
