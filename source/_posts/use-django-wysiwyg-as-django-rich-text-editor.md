@@ -1,5 +1,6 @@
 title: 最好用的Django富文本编辑器
 date: 2016-08-04 14:57:52
+category: "Django"
 tags:
 ---
 
