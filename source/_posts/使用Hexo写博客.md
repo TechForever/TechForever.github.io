@@ -1,7 +1,8 @@
 title: 使用Hexo写博客
 date: 2016-07-04 14:05:08
 permalink: use-Hexo
-tags:
+tags: "other"
+category: "other"
 ---
 
 <!-- more -->
@@ -90,6 +91,19 @@ git push
 ## Trouble Shotting
 * `hexo generate` 时报`hightlight.js`异常
     * 将`_config.yml`中的 auto_detect置为`false`再执行`hexo generate`。 成功后再将其置回`true`(开启代码高亮功能)。
+
+
+* 每次更新source时务必将submodule也同时更新, 否则有可能导致submodule的版本被覆盖
+```
+git checkout source
+git pull --rebase origin source
+git git submodule update --recursive
+```
+
+* 如何同时push submodule
+```
+git push --recurse-submodules=on-demand
+```
 
 ## 感谢
 
