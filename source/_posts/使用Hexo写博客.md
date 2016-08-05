@@ -95,9 +95,10 @@ git push
 
 * 每次更新source时务必将submodule也同时更新, 否则有可能导致submodule的版本被覆盖
 ```
+
 git checkout source
 git pull --rebase origin source
-git git submodule update --recursive
+git submodule update --recursive
 ```
 
 * 如何同时push submodule
