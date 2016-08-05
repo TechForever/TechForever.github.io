@@ -34,6 +34,9 @@ git clone https://github.com/BurnishTechCN/BurnishTechCN.github.io.git blog
 # 更新git submodule管理的主题
 git submodule update --init --recursive
 
+# 在全局安装hexo命令行工具
+npm install hexo -g
+
 # 安装依赖
 cd blog && git checkout source && npm install
 
@@ -83,6 +86,11 @@ git push
 
 # 其他命令参考https://git-scm.com/book/zh/v2/Git-工具-子模块
 ```
+
+## Trouble Shotting
+* `hexo generate` 时报`hightlight.js`异常
+    * 将`_config.yml`中的 auto_detect置为`false`再执行`hexo generate`。 成功后再将其置回`true`(开启代码高亮功能)。
+
 ## 感谢
 
 [hexo](https://hexo.io)
