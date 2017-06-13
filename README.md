@@ -6,6 +6,9 @@
 下面是简略版的
 
 ```
+# 切换到source分支
+git checkout source
+
 # 生成新的markdown文件，在source/_post/文件夹下
 hexo new "your title"
 
