@@ -16,7 +16,7 @@
 <ul>
 <li>在 python 里面引入 RethinkDB 的库就可以操作它了</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ python</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> rethinkdb <span class="keyword">as</span> r</div></pre></td></tr></table></figure>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ python</div><div class="line"></div><div class="line">&gt;&gt;&gt; <span class="keyword">import</span> rethinkdb <span class="keyword">as</span> r</div></pre></td></tr></table></figure>
 <ul>
 <li>连接数据库</li>
 </ul>
@@ -37,14 +37,14 @@
 <h4 id="数据查询"><a href="#数据查询" class="headerlink" title="数据查询"></a>数据查询</h4><ul>
 <li>查询所有数据</li>
 </ul>
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cursor</span> = r.table(<span class="string">"authors"</span>).<span class="built_in">run</span>()</div><div class="line"><span class="built_in">for</span> document in <span class="built_in">cursor</span>:</div><div class="line">    <span class="built_in">print</span>(document)</div></pre></td></tr></table></figure>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cursor = r.table(<span class="string">"authors"</span>).run()</div><div class="line"><span class="keyword">for</span> <span class="built_in">document</span> <span class="keyword">in</span> cursor:</div><div class="line">    <span class="built_in">print</span>(<span class="built_in">document</span>)</div></pre></td></tr></table></figure>
 <p>这个操作会返回 <code>authors</code> 表里面的所有数据，每条数据都会附带它的 <code>id</code></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;<span class="string">u'name'</span>: <span class="string">u'hello'</span>, <span class="string">u'id'</span>: <span class="string">u'6ca50999-75eb-4af4-b9b0-bbac478dc884'</span>&#125;</div></pre></td></tr></table></figure>
 <ul>
 <li>条件查询</li>
 </ul>
 <p>下面的操作会返回 <code>name</code> 是 <code>William Adama</code> 的数据</p>
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cursor</span> = r.table(<span class="string">"authors"</span>).filter(r.row[<span class="string">"name"</span>] == <span class="string">"William Adama"</span>).<span class="built_in">run</span>()</div><div class="line"><span class="built_in">for</span> document in <span class="built_in">cursor</span>:</div><div class="line">    <span class="built_in">print</span>(document)</div></pre></td></tr></table></figure>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cursor = r.table(<span class="string">"authors"</span>).filter(r.row[<span class="string">"name"</span>] == <span class="string">"William Adama"</span>).run()</div><div class="line"><span class="keyword">for</span> <span class="built_in">document</span> <span class="keyword">in</span> cursor:</div><div class="line">    <span class="built_in">print</span>(<span class="built_in">document</span>)</div></pre></td></tr></table></figure>
 <p>下面的操作会返回数据里面 <code>posts</code> 大于 2 条记录的数据</p>
 <figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cursor = r.<span class="keyword">table</span>(<span class="string">"authors"</span>).filter(r.row[<span class="string">"posts"</span>].<span class="keyword">count</span>() &gt; 2).<span class="keyword">run</span>()</div><div class="line"><span class="keyword">for</span> document <span class="keyword">in</span> cursor:</div><div class="line">    <span class="keyword">print</span>(document)</div></pre></td></tr></table></figure>
 <ul>
@@ -53,7 +53,7 @@
 <p>查询 <code>id</code> 为 <code>7644aaf2-9928-4231-aa68-4e65e31bf219</code> 的数据</p>
 <figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">r<span class="selector-class">.db</span>(<span class="string">'test'</span>)<span class="selector-class">.table</span>(<span class="string">'authors'</span>)<span class="selector-class">.get</span>(<span class="string">'7644aaf2-9928-4231-aa68-4e65e31bf219'</span>)<span class="selector-class">.run</span>()</div></pre></td></tr></table></figure>
 <h4 id="实时数据"><a href="#实时数据" class="headerlink" title="实时数据"></a>实时数据</h4><p>使用 <code>changes()</code> 方法来监听数据的变化</p>
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cursor</span> = r.table(<span class="string">"authors"</span>).changes().<span class="built_in">run</span>()</div><div class="line"><span class="built_in">for</span> document in <span class="built_in">cursor</span>:</div><div class="line">    <span class="built_in">print</span>(document)</div></pre></td></tr></table></figure>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cursor = r.table(<span class="string">"authors"</span>).changes().run()</div><div class="line"><span class="keyword">for</span> <span class="built_in">document</span> <span class="keyword">in</span> cursor:</div><div class="line">    <span class="built_in">print</span>(<span class="built_in">document</span>)</div></pre></td></tr></table></figure>
 <h4 id="更新数据"><a href="#更新数据" class="headerlink" title="更新数据"></a>更新数据</h4><p>使用 <code>update()</code> 方法来删除数据</p>
 <p>更新所有数据</p>
 <figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">r.<span class="keyword">table</span>(<span class="string">"authors"</span>).<span class="keyword">update</span>(&#123;<span class="string">"type"</span>: <span class="string">"fictional"</span>&#125;).<span class="keyword">run</span>()</div></pre></td></tr></table></figure>
@@ -70,7 +70,7 @@
 <li><a href="https://github.com/rethinkdb/rethinkdb" target="_blank" rel="external">https://github.com/rethinkdb/rethinkdb</a></li>
 </ul>
 <p><img src="http://img.l.jifangcheng.com/rethinkdb-2.png" alt=""></p>
-</div><script type="text/javascript" src="/js/share.js?v=0.1.0" async></script><a data-url="http://blog.burnish.cn/posts/RethinkDB-database-for-the-realtime/" data-id="cirk2shj70005ttt6cdojkm2w" class="article-share-link">分享到</a><div class="tags"></div><div class="post-nav"><a href="/posts/use-django-wysiwyg-as-django-rich-text-editor/" class="pre">最好用的Django富文本编辑器</a><a href="/posts/Extreme-simplicity-Markdown/" class="next">极致简洁 Markdown</a></div><div id="disqus_thread"><script>var disqus_shortname = 'Burnish';
+</div><script type="text/javascript" src="/js/share.js?v=0.1.0" async></script><a data-url="http://blog.burnish.cn/posts/RethinkDB-database-for-the-realtime/" data-id="cj3v02sd70002tvfys9asfilt" class="article-share-link">分享到</a><div class="tags"></div><div class="post-nav"><a href="/posts/use-django-wysiwyg-as-django-rich-text-editor/" class="pre">最好用的Django富文本编辑器</a><a href="/posts/Extreme-simplicity-Markdown/" class="next">极致简洁 Markdown</a></div><div id="disqus_thread"><script>var disqus_shortname = 'Burnish';
 var disqus_identifier = 'posts/RethinkDB-database-for-the-realtime/';
 var disqus_title = 'RethinkDB 实时数据库';
 var disqus_url = 'http://blog.burnish.cn/posts/RethinkDB-database-for-the-realtime/';
