@@ -1,7 +1,7 @@
-# Burnish team blog
+# Tech Forever team blog
 
 ## 使用 Hexo
-具体的可以看这里：[使用Hexo写博客 | Burnish](http://blog.burnish.cn/posts/use-Hexo/)
+具体的可以看这里：[使用Hexo写博客 | Burnish](http://blog.whatslife.cn/posts/use-Hexo/)
 
 下面是简略版的
 
