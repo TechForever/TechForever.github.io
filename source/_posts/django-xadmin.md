@@ -5,7 +5,7 @@ tags:
 ---
 
 
-Django xadmin是Django admin的替代品，功能更强大。能通过配置快速实现chart是我选择他的主要原因。另外还有第三方插件可以用于扩展
+Django xadmin是Django admin的替代品，功能更强大。能通过配置快速实现chart是我选择他的主要原因。另外还有第三方插件可以用于扩展。
 
 <!-- more -->
 

@@ -1,7 +1,8 @@
 title: Atom - The hackable text editor
 date: 2016-07-27 17:11:03
 permalink: Atom-The-hackable-text-editor
-tags:
+category: 技术
+tags: 编辑器 js
 ---
 
 
@@ -26,6 +27,8 @@ GitHub 开源了 [Atom](https://github.com/atom/atom) 和构建它的内核 [Ele
 * Atom 社区也快速发展
 
 ![Atom](http://img.l.jifangcheng.com/atom-2.png)
+
+<!-- more -->
 
 ### 跨平台
 你可以在 macOS，Windows 以及各种 Linux 发行版本上使用 Atom
