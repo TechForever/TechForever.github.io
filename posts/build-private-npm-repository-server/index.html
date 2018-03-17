@@ -117,7 +117,7 @@ sinopia 安装和使用都极其简单，它还有以下的特性：
 
 支持安装 n">
 <meta property="og:image" content="http://img.l.jifangcheng.com/sinopia-1.png">
-<meta property="og:updated_time" content="2017-06-13T03:37:25.000Z">
+<meta property="og:updated_time" content="2018-03-17T12:43:19.773Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="npm 私有仓库搭建">
 <meta name="twitter:description" content="为什么搭建私有的 npm 仓库
@@ -384,6 +384,7 @@ sinopia 安装和使用都极其简单，它还有以下的特性：
 </ul>
 <h2 id="使用-sinopia"><a href="#使用-sinopia" class="headerlink" title="使用 sinopia"></a>使用 sinopia</h2><h3 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># 安装和使用</div><div class="line">$ npm install -g sinopia</div><div class="line">$ sinopia</div><div class="line"></div><div class="line"># npm 配置，使用 sinopia 搭建的 npm 仓库来下载 npm 包</div><div class="line">$ npm set registry http://localhost:4873/</div></pre></td></tr></table></figure>
 <p>sinopia 界面<br><img src="http://img.l.jifangcheng.com/sinopia-1.png" alt="sinopia"></p>
+<!-- more -->
 <p>服务器搭建完成之后，就可以使用 <code>http://localhost:4873/</code> 作为仓库地址来下载和发布 npm 包了。</p>
 <p>当你使用 <code>npm install xx</code> 后，sinopia 会检查本地有没有 xx 这个包，如果有，直接使用本地的缓存；如果没有，它会从 npm 官方仓库下载这个包，并将这个包缓存在本地以便二次下载。sinopia 并不会同步 npm 官方仓库的所有内容，它只会缓存你使用 <code>npm install</code> 下载过的内容。</p>
 <p>如果要发布私有包，使用 <code>npm publish --registry=http://localhost:4873/</code> 就可以了，发布好了你就可以在 web 端界面上看到它了。</p>
