@@ -4,8 +4,6 @@ permalink: build-private-npm-repository-server
 tags:
 ---
 
-<!-- more -->
-
 ## 为什么搭建私有的 npm 仓库
 * 发布和管理公司内部的私有的、暂不公开的 npm 包
 * 加速 npm 包的下载，npm 官方仓库在国内太慢了
@@ -40,6 +38,8 @@ $ npm set registry http://localhost:4873/
 
 sinopia 界面
 ![sinopia](http://img.l.jifangcheng.com/sinopia-1.png)
+
+<!-- more -->
 
 服务器搭建完成之后，就可以使用 `http://localhost:4873/` 作为仓库地址来下载和发布 npm 包了。
 
