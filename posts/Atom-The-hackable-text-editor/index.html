@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="编辑器 js," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Tech Forever" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="Atom 起初是一个 GitHub 内部的小项目，后来发展壮大成为一个正式的开源项目。Atom 基于 Electron（Electron 是一个可以让你用 JavaScript, HTML 和 CSS 来写跨平台桌面应用程序的框架），Atom 是用 CoffeeScript 写的，相当于一个 Web App，也正是因为这样，其可定制程度非常高。
+如果你以前用过 Sublime Text，你会发现">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Atom - The hackable text editor">
+<meta property="og:url" content="http://blog.whatslife.cn/posts/Atom-The-hackable-text-editor/index.html">
+<meta property="og:site_name" content="Tech Forever">
+<meta property="og:description" content="Atom 起初是一个 GitHub 内部的小项目，后来发展壮大成为一个正式的开源项目。Atom 基于 Electron（Electron 是一个可以让你用 JavaScript, HTML 和 CSS 来写跨平台桌面应用程序的框架），Atom 是用 CoffeeScript 写的，相当于一个 Web App，也正是因为这样，其可定制程度非常高。
+如果你以前用过 Sublime Text，你会发现">
+<meta property="og:image" content="http://img.l.jifangcheng.com/atom-2.png">
+<meta property="og:image" content="http://img.l.jifangcheng.com/atom-5.png">
+<meta property="og:image" content="http://img.l.jifangcheng.com/atom-6.png">
+<meta property="og:image" content="http://img.l.jifangcheng.com/atom-7.png">
+<meta property="og:image" content="http://img.l.jifangcheng.com/atom-8.png">
+<meta property="og:image" content="http://img.l.jifangcheng.com/atom-9.png">
+<meta property="og:image" content="http://img.l.jifangcheng.com/atom-10.png">
+<meta property="og:image" content="http://img.l.jifangcheng.com/atom-11.png">
+<meta property="og:image" content="http://img.l.jifangcheng.com/atom-3.png">
+<meta property="og:image" content="http://img.l.jifangcheng.com/atom-4.png">
+<meta property="og:image" content="http://img.l.jifangcheng.com/atom-13.png">
+<meta property="og:image" content="http://img.l.jifangcheng.com/atom-14.png">
+<meta property="og:image" content="http://img.l.jifangcheng.com/atom-12.png">
+<meta property="og:updated_time" content="2018-03-17T11:33:30.797Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Atom - The hackable text editor">
+<meta name="twitter:description" content="Atom 起初是一个 GitHub 内部的小项目，后来发展壮大成为一个正式的开源项目。Atom 基于 Electron（Electron 是一个可以让你用 JavaScript, HTML 和 CSS 来写跨平台桌面应用程序的框架），Atom 是用 CoffeeScript 写的，相当于一个 Web App，也正是因为这样，其可定制程度非常高。
+如果你以前用过 Sublime Text，你会发现">
+<meta name="twitter:image" content="http://img.l.jifangcheng.com/atom-2.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://blog.whatslife.cn/posts/Atom-The-hackable-text-editor/"/>
+
+
+
+
+
+  <title>Atom - The hackable text editor | Tech Forever</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Tech Forever</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.whatslife.cn/posts/Atom-The-hackable-text-editor/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tech Forever">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tech Forever">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Atom - The hackable text editor</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-07-27T17:11:03+08:00">
+                2016-07-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/posts/Atom-The-hackable-text-editor/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="posts/Atom-The-hackable-text-editor/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><a href="https://github.com/atom/atom" target="_blank" rel="external">Atom</a> 起初是一个 GitHub 内部的小项目，后来发展壮大成为一个正式的开源项目。Atom 基于 <a href="https://github.com/electron/electron" target="_blank" rel="external">Electron</a>（Electron 是一个可以让你用 JavaScript, HTML 和 CSS 来写跨平台桌面应用程序的框架），Atom 是用 <a href="http://coffeescript.org" target="_blank" rel="external">CoffeeScript</a> 写的，相当于一个 Web App，也正是因为这样，其可定制程度非常高。</p>
+<p>如果你以前用过 Sublime Text，你会发现 Atom 和 Sublime 非常像，连快捷键都基本一样，但是它们真的没有关系。</p>
+<h2 id="为什么使用-Atom"><a href="#为什么使用-Atom" class="headerlink" title="为什么使用 Atom"></a>为什么使用 Atom</h2><h3 id="开源"><a href="#开源" class="headerlink" title="开源"></a>开源</h3><p>GitHub 开源了 <a href="https://github.com/atom/atom" target="_blank" rel="external">Atom</a> 和构建它的内核 <a href="https://github.com/electron/electron" target="_blank" rel="external">Electron</a>，开源两年以来所取得的成绩非常耀眼：</p>
+<ul>
+<li>110 万月度活跃用户</li>
+<li>1590 万次下载</li>
+<li>300 个新版本发布</li>
+<li>超过 1144 位贡献者</li>
+<li>6.2 万次代码提交</li>
+<li>5897 个 Pull Request</li>
+<li>920 万次的月度访问量</li>
+<li>GitHub 上接近 3 万个 Star</li>
+<li>Atom 社区也快速发展</li>
+</ul>
+<p><img src="http://img.l.jifangcheng.com/atom-2.png" alt="Atom"></p>
+<a id="more"></a>
+<h3 id="跨平台"><a href="#跨平台" class="headerlink" title="跨平台"></a>跨平台</h3><p>你可以在 macOS，Windows 以及各种 Linux 发行版本上使用 Atom</p>
+<h3 id="apm-Atom-Package-Manager"><a href="#apm-Atom-Package-Manager" class="headerlink" title="apm: Atom Package Manager"></a>apm: Atom Package Manager</h3><p>apm 是 Atom 官方的内建的包管理器，你可以在 <a href="https://atom.io/packages" target="_blank" rel="external">https://atom.io/packages</a> 查看所有的 Atom 扩展（插件，主题）</p>
+<p>你可以在 Atom 的偏好设置里面添加、更新、删除和管理 Atom 的扩展</p>
+<p>apm 还提供了一个命令行工具，你可以使用 <code>apm install xx</code> 来为 Atom 安装扩展，你可以使用 <code>apm --help</code> 来查看 apm 支持的所有命令</p>
+<p>关于 apm 的更多文档你可以去 <a href="https://github.com/atom/apm" target="_blank" rel="external">https://github.com/atom/apm</a> 看看</p>
+<h3 id="漂亮的界面"><a href="#漂亮的界面" class="headerlink" title="漂亮的界面"></a>漂亮的界面</h3><p>你可以使用 Atom 官方提供的主题和社区贡献的主题来美化你的 Atom，如果你还不喜欢，你甚至可以自己来自定义你的 Atom 界面</p>
+<p><img src="http://img.l.jifangcheng.com/atom-5.png" alt=""><br><img src="http://img.l.jifangcheng.com/atom-6.png" alt=""><br><img src="http://img.l.jifangcheng.com/atom-7.png" alt=""><br><img src="http://img.l.jifangcheng.com/atom-8.png" alt=""><br><img src="http://img.l.jifangcheng.com/atom-9.png" alt=""><br><img src="http://img.l.jifangcheng.com/atom-10.png" alt=""><br><img src="http://img.l.jifangcheng.com/atom-11.png" alt=""></p>
+<h3 id="The-hackable-text-editor"><a href="#The-hackable-text-editor" class="headerlink" title="The hackable text editor"></a>The hackable text editor</h3><h4 id="更智能的自动补全"><a href="#更智能的自动补全" class="headerlink" title="更智能的自动补全"></a>更智能的自动补全</h4><p>不仅仅是语言关键字的补全，还可以补全路径，使用过的包名，函数，变量名等等</p>
+<p><img src="http://img.l.jifangcheng.com/atom-3.png" alt=""></p>
+<h4 id="多行编辑"><a href="#多行编辑" class="headerlink" title="多行编辑"></a>多行编辑</h4><p>类似于 Sublime，Atom 也支持多行编辑，它允许你同时编辑多行文本。比如说你需要把一个文档里面的 <code>(&#39;some text&#39;)</code> 替换为 <code>(&quot;some text&quot;)</code>，多行编辑就派上用场了，选中关键词后使用 ctrl/cmd + d 选择下一个这个词，使用 ctrl/cmd + k 可以跳过某个关键词，全部选中关键词后就可以对它们进行编辑了</p>
+<p><img src="http://img.l.jifangcheng.com/atom-4.png" alt=""></p>
+<h4 id="多窗口"><a href="#多窗口" class="headerlink" title="多窗口"></a>多窗口</h4><p>你可以在多窗口中编辑不同的文件</p>
+<p><img src="http://img.l.jifangcheng.com/atom-13.png" alt=""></p>
+<p>也可以在多窗口中编辑相同的文件</p>
+<p><img src="http://img.l.jifangcheng.com/atom-14.png" alt=""></p>
+<h4 id="VIM-模式"><a href="#VIM-模式" class="headerlink" title="VIM 模式"></a>VIM 模式</h4><p>Atom 官方提供了对 VIM 编辑模式的支持</p>
+<p><img src="http://img.l.jifangcheng.com/atom-12.png" alt=""></p>
+<p>你可以在 Atom 中使用 VIM 的基本功能（没有插件的 VIM）</p>
+<h4 id="代码片段"><a href="#代码片段" class="headerlink" title="代码片段"></a>代码片段</h4><p>你可以在你的用户目录下的 <code>.atom/snippets.cson</code> 中定义代码片段，定义了代码片段之后你就可以使用你定义的快捷单词 + tab 键来插入一段代码</p>
+<figure class="highlight cson"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># .source.python 表明下面的这些代码片段只能在 python 文件中使用</span></div><div class="line"><span class="string">'.source.python'</span>:</div><div class="line">  <span class="string">'Header'</span>:</div><div class="line">    <span class="string">'prefix'</span>: <span class="string">'head'</span></div><div class="line">    <span class="string">'body'</span>: <span class="string">'''</span></div><div class="line">      #!/usr/bin/env python</div><div class="line">      # coding=utf-8</div><div class="line">    '''</div><div class="line"></div><div class="line">  <span class="string">'ipdb'</span>:</div><div class="line">    <span class="string">'prefix'</span>: <span class="string">'ipdb'</span></div><div class="line">    <span class="string">'body'</span>: <span class="string">"__import__('ipdb').set_trace()"</span></div></pre></td></tr></table></figure>
+<h4 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h4><ul>
+<li>ctrl/cmd + p 快速切换文件</li>
+<li>ctrl/cmd + shift + p 打开功能面板</li>
+<li>ctrl + g 快速跳转到文件的某一行</li>
+<li>ctrl/cmd + x 删除一整行</li>
+<li>ctrl/cmd + r 在文件内的函数定义间跳转</li>
+</ul>
+<h3 id="Sublime-VS-Atom"><a href="#Sublime-VS-Atom" class="headerlink" title="Sublime VS Atom"></a>Sublime VS Atom</h3><p>我以前也是 Sublime 的用户，后来转到了 Atom，我对这两个编辑器都还算是了解，所以来说一下各自相比于对方的优缺点。</p>
+<p>Sublime 的优点</p>
+<ul>
+<li>启动速度快，更稳定</li>
+</ul>
+<p>Atom 的优点</p>
+<ul>
+<li>活跃的开源社区</li>
+<li>强大的官方的包管理器</li>
+<li>高度可定制</li>
+<li>更好的 VIM 模式（Sublime 3 的 VIM 模式居然还有 BUG）</li>
+</ul>
+<h2 id="一些不足"><a href="#一些不足" class="headerlink" title="一些不足"></a>一些不足</h2><ul>
+<li>启动速度慢</li>
+<li>编辑大型文件显得有些吃力</li>
+</ul>
+<h2 id="一些好用的-Atom-插件"><a href="#一些好用的-Atom-插件" class="headerlink" title="一些好用的 Atom 插件"></a>一些好用的 Atom 插件</h2><h3 id="通用"><a href="#通用" class="headerlink" title="通用"></a>通用</h3><ul>
+<li><a href="https://atom.io/packages/trailing-spaces" target="_blank" rel="external">trailing-spaces</a> - 高亮多余的空格</li>
+<li><a href="https://atom.io/packages/vim-mode" target="_blank" rel="external">vim-mode</a> - vim 模式</li>
+<li><a href="https://atom.io/packages/ex-mode" target="_blank" rel="external">ex-mode</a> - vim 模式的拓展</li>
+<li><a href="https://atom.io/packages/minimap" target="_blank" rel="external">minimap</a> - 右侧小地图</li>
+<li><a href="https://atom.io/packages/autocomplete-paths" target="_blank" rel="external">autocomplete-paths</a> - 对路径选择进行增强</li>
+<li><a href="https://atom.io/packages/atom-beautify" target="_blank" rel="external">atom-beautify</a> - 自动美化代码格式</li>
+</ul>
+<h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><ul>
+<li><a href="http://nuclide.io" target="_blank" rel="external">Nuclide</a> - 用于编写 React Native</li>
+<li><a href="https://atom.io/packages/emmet" target="_blank" rel="external">Emmet</a> - 快速编写 HTML</li>
+<li><a href="https://atom.io/packages/tag" target="_blank" rel="external">tag</a> - Sublime 风格的 HTML 标签自动闭合</li>
+<li><a href="https://atom.io/packages/color-picker" target="_blank" rel="external">color-picker</a> - CSS 颜色取色器</li>
+<li><a href="https://atom.io/packages/autoprefixer" target="_blank" rel="external">autoprefixer</a> - 自动补全 CSS 前缀</li>
+<li><a href="https://atom.io/packages/linter-jshint" target="_blank" rel="external">linter-jshint</a> - JavaScript 语法检查</li>
+</ul>
+<h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3><ul>
+<li><a href="https://atom.io/packages/autocomplete-python" target="_blank" rel="external">autocomplete-python</a> - 对Python提示进行增强</li>
+<li><a href="https://atom.io/packages/linter-flake8" target="_blank" rel="external">linter-flake8</a> - Python 语法检查</li>
+<li><a href="https://atom.io/packages/python-tools" target="_blank" rel="external">python-tools</a> - 一些有用的 Python 开发工具集</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/编辑器-js/" rel="tag"># 编辑器 js</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/build-private-npm-repository-server/" rel="next" title="npm 私有仓库搭建">
+                <i class="fa fa-chevron-left"></i> npm 私有仓库搭建
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/Extreme-simplicity-Markdown/" rel="prev" title="极致简洁 Markdown">
+                极致简洁 Markdown <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Tech Forever" />
+          <p class="site-author-name" itemprop="name">Tech Forever</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么使用-Atom"><span class="nav-number">1.</span> <span class="nav-text">为什么使用 Atom</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#开源"><span class="nav-number">1.1.</span> <span class="nav-text">开源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#跨平台"><span class="nav-number">1.2.</span> <span class="nav-text">跨平台</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#apm-Atom-Package-Manager"><span class="nav-number">1.3.</span> <span class="nav-text">apm: Atom Package Manager</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#漂亮的界面"><span class="nav-number">1.4.</span> <span class="nav-text">漂亮的界面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-hackable-text-editor"><span class="nav-number">1.5.</span> <span class="nav-text">The hackable text editor</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#更智能的自动补全"><span class="nav-number">1.5.1.</span> <span class="nav-text">更智能的自动补全</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多行编辑"><span class="nav-number">1.5.2.</span> <span class="nav-text">多行编辑</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多窗口"><span class="nav-number">1.5.3.</span> <span class="nav-text">多窗口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#VIM-模式"><span class="nav-number">1.5.4.</span> <span class="nav-text">VIM 模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码片段"><span class="nav-number">1.5.5.</span> <span class="nav-text">代码片段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其它"><span class="nav-number">1.5.6.</span> <span class="nav-text">其它</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sublime-VS-Atom"><span class="nav-number">1.6.</span> <span class="nav-text">Sublime VS Atom</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些不足"><span class="nav-number">2.</span> <span class="nav-text">一些不足</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些好用的-Atom-插件"><span class="nav-number">3.</span> <span class="nav-text">一些好用的 Atom 插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#通用"><span class="nav-number">3.1.</span> <span class="nav-text">通用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端"><span class="nav-number">3.2.</span> <span class="nav-text">前端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python"><span class="nav-number">3.3.</span> <span class="nav-text">Python</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tech Forever</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cyt9sSSYy';
+      var conf = '0c7b1c60f4b87601de91a4843465edc1';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
