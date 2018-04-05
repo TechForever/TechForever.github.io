@@ -1,7 +1,7 @@
 title: django-xadmin
 date: 2016-08-05 16:13:41
-category: "Django"
-tags:
+category: 技术
+tags: Django
 ---
 
 
