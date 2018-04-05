@@ -77,5 +77,13 @@ feed:
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repo: https://github.com/TechForever/TechForever.github.io.git
+  - type: git
+    repo: https://github.com/TechForever/TechForever.github.io.git
+  - type: rsync
+    host: 39.107.115.92
+    user: wis
+    root: /data/wis/opt/blog/
+    port: 22
+    delete: true
+    verbose: true
+    ignore errors: false
