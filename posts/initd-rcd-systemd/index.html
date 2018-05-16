@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Linux Ubuntu 服务进程管理," />
+  <meta name="keywords" content="Linux,Ubuntu,服务进程管理," />
 
 
 
@@ -112,7 +112,7 @@ Ubuntu 16.04 新增了一个服务进程管理工具 systemd。我将其理解�
 <meta property="og:image" content="http://blogqn.qixincha.com/48039570-955D-4C1D-BA92-5B07E39D1787.png">
 <meta property="og:image" content="http://blogqn.qixincha.com/61290685-C7D9-4A45-8C5A-EE05C9B367C0.png">
 <meta property="og:image" content="http://blogqn.qixincha.com/D4861105-42BE-4A22-8140-A7C4D16ECC2A.png">
-<meta property="og:updated_time" content="2018-04-05T14:38:15.400Z">
+<meta property="og:updated_time" content="2018-05-16T08:53:44.783Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="init.d + rc.d VS systemd Ubuntu服务进程管理与开机自启动">
 <meta name="twitter:description" content="作为一名Ubuntu服务器深度用户，在Ubuntu 16.04版本之前一直使用init.d + rc.d套装来管理各种服务。
@@ -401,6 +401,7 @@ Ubuntu 16.04 新增了一个服务进程管理工具 systemd。我将其理解�
 <li><p>Tips:</p>
 <ul>
 <li>当使用<code>service</code>能启动服务，但停止或查看status时提示找不到服务。多半是服务配置文件中修改了pid文件路径。 而<code>/etc/init.d/script</code>脚本依赖pid来管理服务进程状态，而且脚本中的pid路径是写死的。一旦<code>/etc/init.d/script</code>中使用的pid路径与实际pid文件路径不符时，就无法做后续的所有管理工作了。一旦启动， 就脱离service控制了。</li>
+<li><code>/etc/init.d/</code>下的脚本需要有可执行权限 <code>chmod +x</code>。</li>
 <li>大多<code>init.d</code>脚本会依赖与<code>/etc/default/</code>目录中的配置文件，遇到问题时，不妨也排查一下这个目录中的配置文件是否正确。</li>
 </ul>
 </li>
@@ -450,6 +451,7 @@ Ubuntu 16.04 新增了一个服务进程管理工具 systemd。我将其理解�
 <li><p>systemd配置文件地址，类似init.d的/etc/init.d/目录：</p>
 <pre><code>/lib/systemd/system/
 </code></pre></li>
+<li>执行以下命令前，需确保 <code>/etc/init.d/</code> 或 <code>/lib/systemd/system/</code> 下有对应服务的管理脚本。<br>相关脚本一般都可google到，比如：<a href="https://github.com/zokeber/supervisor-systemd/blob/master/etc/systemd/system/supervisord.service" target="_blank" rel="external">https://github.com/zokeber/supervisor-systemd/blob/master/etc/systemd/system/supervisord.service</a><br>也可以自己参考着现有脚本写</li>
 <li><p>开机自启动，也会对应的写到rc.d中：</p>
 <pre><code>systemctl enable nginx
 </code></pre></li>
@@ -491,7 +493,11 @@ systemctl stop nginx
       
         <div class="post-tags">
           
-            <a href="/tags/Linux-Ubuntu-服务进程管理/" rel="tag"># Linux Ubuntu 服务进程管理</a>
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
+          
+            <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
+          
+            <a href="/tags/服务进程管理/" rel="tag"># 服务进程管理</a>
           
         </div>
       
@@ -613,7 +619,7 @@ systemctl stop nginx
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
