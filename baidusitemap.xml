@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://blog.yuntianti.com/posts/django-xadmin/</loc>
+    <lastmod>2018-06-02T13:18:54.379Z</lastmod>
+    <data>
+        <display>
+        <title>django-xadmin</title>
+        <pubTime>2016-08-05T08:13:41.000Z</pubTime>
+        
+        <tag>Django</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://blog.yuntianti.com/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.yuntianti.com/posts/initd-rcd-systemd/</loc>
-    <lastmod>2018-05-16T08:53:44.783Z</lastmod>
+    <lastmod>2018-06-02T13:11:39.974Z</lastmod>
     <data>
         <display>
         <title>init.d + rc.d VS systemd Ubuntu服务进程管理与开机自启动</title>
@@ -36,26 +56,6 @@
         <pubTime>2016-07-27T09:11:03.000Z</pubTime>
         
         <tag>编辑器 js</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://blog.yuntianti.com/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.yuntianti.com/posts/django-xadmin/</loc>
-    <lastmod>2018-04-05T10:22:33.734Z</lastmod>
-    <data>
-        <display>
-        <title>django-xadmin</title>
-        <pubTime>2016-08-05T08:13:41.000Z</pubTime>
-        
-        <tag>Django</tag>
          
          
            
