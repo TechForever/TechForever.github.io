@@ -1,6 +1,7 @@
 title: {{ title }}
 date: {{ date }}
-permalink: 
-category: 
+keywords:{{ keywords }}
+permalink:
+category:
 tags:
 ---

@@ -1,5 +1,6 @@
 title: init.d + rc.d VS systemd Ubuntu服务进程管理与开机自启动
 date: 2018-04-05 18:20:26
+keywords: Tech Forever,博客,JavaScript,html5,css3,TyepScript,ES6,ES7,Python,Go,Django,Mysql,Mongo,ElasticsearchLinux,NodeJs,Ubuntu
 permalink: initd-rcd-systemd
 category: 技术
 tags:

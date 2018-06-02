@@ -4,15 +4,16 @@
 
 # Site
 title: Tech Forever
-subtitle:
-description:
+subtitle: Tech Forever
+description: Tech Forever是一个技术团队，专注于互联网技术。团队主要技术栈:Python,Go,Javascript,TypeScript,Swift
 author: Tech Forever
 language: zh-Hans
-timezone:
+timezone: Asia/Shanghai
+keywords: Tech Forever,博客,JavaScript,html5,css3,TyepScript,ES6,ES7,Python,Go,Django,Mysql,Mongo,ElasticsearchLinux,NodeJs,Ubuntu
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://blog.whatslife.cn
+url: http://blog.yuntianti.com
 root: /
 permalink: posts/:title/
 permalink_defaults:
@@ -87,3 +88,9 @@ deploy:
     delete: true
     verbose: true
     ignore errors: false
+
+# SEO
+sitemap:
+    path: sitemap.xml
+baidusitemap:
+    path: baidusitemap.xml
