@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://blog.yuntianti.com/posts/initd-rcd-systemd/</loc>
+    <lastmod>2018-05-16T08:53:44.783Z</lastmod>
+    <data>
+        <display>
+        <title>init.d + rc.d VS systemd Ubuntu服务进程管理与开机自启动</title>
+        <pubTime>2018-04-05T10:20:26.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
+         
+        <tag>服务进程管理</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://blog.yuntianti.com/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.yuntianti.com/posts/Atom-The-hackable-text-editor/</loc>
+    <lastmod>2018-04-05T10:22:34.595Z</lastmod>
+    <data>
+        <display>
+        <title>Atom - The hackable text editor</title>
+        <pubTime>2016-07-27T09:11:03.000Z</pubTime>
+        
+        <tag>编辑器 js</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://blog.yuntianti.com/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.yuntianti.com/posts/django-xadmin/</loc>
+    <lastmod>2018-04-05T10:22:33.734Z</lastmod>
+    <data>
+        <display>
+        <title>django-xadmin</title>
+        <pubTime>2016-08-05T08:13:41.000Z</pubTime>
+        
+        <tag>Django</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://blog.yuntianti.com/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.yuntianti.com/posts/live-for-yourself/</loc>
+    <lastmod>2018-03-18T03:22:55.625Z</lastmod>
+    <data>
+        <display>
+        <title>为自己而活的时光</title>
+        <pubTime>2018-03-17T11:22:04.000Z</pubTime>
+        
+        <tag>生活</tag>
+         
+         
+           
+             
+              <breadCrumb title="生活" url="http://blog.yuntianti.com/categories/%E7%94%9F%E6%B4%BB/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.yuntianti.com/posts/build-private-npm-repository-server/</loc>
+    <lastmod>2018-03-17T13:13:32.873Z</lastmod>
+    <data>
+        <display>
+        <title>npm 私有仓库搭建</title>
+        <pubTime>2016-07-26T05:38:31.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.yuntianti.com/posts/use-Hexo/</loc>
+    <lastmod>2018-03-17T11:20:24.337Z</lastmod>
+    <data>
+        <display>
+        <title>使用 Hexo 写博客</title>
+        <pubTime>2016-07-04T06:05:08.000Z</pubTime>
+        
+        <tag>other</tag>
+         
+         
+           
+             
+              <breadCrumb title="other" url="http://blog.yuntianti.com/categories/other/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.yuntianti.com/posts/RethinkDB-database-for-the-realtime/</loc>
+    <lastmod>2017-06-13T03:37:25.000Z</lastmod>
+    <data>
+        <display>
+        <title>RethinkDB 实时数据库</title>
+        <pubTime>2016-08-01T05:46:35.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.yuntianti.com/posts/use-django-wysiwyg-as-django-rich-text-editor/</loc>
+    <lastmod>2017-06-13T03:37:25.000Z</lastmod>
+    <data>
+        <display>
+        <title>最好用的Django富文本编辑器</title>
+        <pubTime>2016-08-04T06:57:52.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Django" url="http://blog.yuntianti.com/categories/Django/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.yuntianti.com/posts/Extreme-simplicity-Markdown/</loc>
+    <lastmod>2017-06-13T03:37:25.000Z</lastmod>
+    <data>
+        <display>
+        <title>极致简洁 Markdown</title>
+        <pubTime>2016-07-28T09:23:37.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+</urlset>
