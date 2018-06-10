@@ -5,9 +5,9 @@
   <subtitle>Tech Forever</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://blog.yuntianti.com/"/>
+  <link href="https://blog.yuntianti.com/"/>
   <updated>2018-06-02T13:11:39.974Z</updated>
-  <id>http://blog.yuntianti.com/</id>
+  <id>https://blog.yuntianti.com/</id>
   
   <author>
     <name>Tech Forever</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>init.d + rc.d VS systemd Ubuntu服务进程管理与开机自启动</title>
-    <link href="http://blog.yuntianti.com/posts/initd-rcd-systemd/"/>
-    <id>http://blog.yuntianti.com/posts/initd-rcd-systemd/</id>
+    <link href="https://blog.yuntianti.com/posts/initd-rcd-systemd/"/>
+    <id>https://blog.yuntianti.com/posts/initd-rcd-systemd/</id>
     <published>2018-04-05T10:20:26.000Z</published>
     <updated>2018-06-02T13:11:39.974Z</updated>
     
@@ -37,21 +37,21 @@
     
     </summary>
     
-      <category term="技术" scheme="http://blog.yuntianti.com/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://blog.yuntianti.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Linux" scheme="http://blog.yuntianti.com/tags/Linux/"/>
+      <category term="Linux" scheme="https://blog.yuntianti.com/tags/Linux/"/>
     
-      <category term="Ubuntu" scheme="http://blog.yuntianti.com/tags/Ubuntu/"/>
+      <category term="Ubuntu" scheme="https://blog.yuntianti.com/tags/Ubuntu/"/>
     
-      <category term="服务进程管理" scheme="http://blog.yuntianti.com/tags/%E6%9C%8D%E5%8A%A1%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/"/>
+      <category term="服务进程管理" scheme="https://blog.yuntianti.com/tags/%E6%9C%8D%E5%8A%A1%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
   <entry>
     <title>为自己而活的时光</title>
-    <link href="http://blog.yuntianti.com/posts/live-for-yourself/"/>
-    <id>http://blog.yuntianti.com/posts/live-for-yourself/</id>
+    <link href="https://blog.yuntianti.com/posts/live-for-yourself/"/>
+    <id>https://blog.yuntianti.com/posts/live-for-yourself/</id>
     <published>2018-03-17T11:22:04.000Z</published>
     <updated>2018-03-18T03:22:55.625Z</updated>
     
@@ -65,17 +65,17 @@
     
     </summary>
     
-      <category term="生活" scheme="http://blog.yuntianti.com/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="https://blog.yuntianti.com/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="生活" scheme="http://blog.yuntianti.com/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="https://blog.yuntianti.com/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
   <entry>
     <title>django-xadmin</title>
-    <link href="http://blog.yuntianti.com/posts/django-xadmin/"/>
-    <id>http://blog.yuntianti.com/posts/django-xadmin/</id>
+    <link href="https://blog.yuntianti.com/posts/django-xadmin/"/>
+    <id>https://blog.yuntianti.com/posts/django-xadmin/</id>
     <published>2016-08-05T08:13:41.000Z</published>
     <updated>2018-06-02T13:18:54.379Z</updated>
     
@@ -87,17 +87,17 @@
     
     </summary>
     
-      <category term="技术" scheme="http://blog.yuntianti.com/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://blog.yuntianti.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Django" scheme="http://blog.yuntianti.com/tags/Django/"/>
+      <category term="Django" scheme="https://blog.yuntianti.com/tags/Django/"/>
     
   </entry>
   
   <entry>
     <title>最好用的Django富文本编辑器</title>
-    <link href="http://blog.yuntianti.com/posts/use-django-wysiwyg-as-django-rich-text-editor/"/>
-    <id>http://blog.yuntianti.com/posts/use-django-wysiwyg-as-django-rich-text-editor/</id>
+    <link href="https://blog.yuntianti.com/posts/use-django-wysiwyg-as-django-rich-text-editor/"/>
+    <id>https://blog.yuntianti.com/posts/use-django-wysiwyg-as-django-rich-text-editor/</id>
     <published>2016-08-04T06:57:52.000Z</published>
     <updated>2017-06-13T03:37:25.000Z</updated>
     
@@ -109,15 +109,15 @@
     
     </summary>
     
-      <category term="Django" scheme="http://blog.yuntianti.com/categories/Django/"/>
+      <category term="Django" scheme="https://blog.yuntianti.com/categories/Django/"/>
     
     
   </entry>
   
   <entry>
     <title>RethinkDB 实时数据库</title>
-    <link href="http://blog.yuntianti.com/posts/RethinkDB-database-for-the-realtime/"/>
-    <id>http://blog.yuntianti.com/posts/RethinkDB-database-for-the-realtime/</id>
+    <link href="https://blog.yuntianti.com/posts/RethinkDB-database-for-the-realtime/"/>
+    <id>https://blog.yuntianti.com/posts/RethinkDB-database-for-the-realtime/</id>
     <published>2016-08-01T05:46:35.000Z</published>
     <updated>2017-06-13T03:37:25.000Z</updated>
     
@@ -135,8 +135,8 @@
   
   <entry>
     <title>极致简洁 Markdown</title>
-    <link href="http://blog.yuntianti.com/posts/Extreme-simplicity-Markdown/"/>
-    <id>http://blog.yuntianti.com/posts/Extreme-simplicity-Markdown/</id>
+    <link href="https://blog.yuntianti.com/posts/Extreme-simplicity-Markdown/"/>
+    <id>https://blog.yuntianti.com/posts/Extreme-simplicity-Markdown/</id>
     <published>2016-07-28T09:23:37.000Z</published>
     <updated>2017-06-13T03:37:25.000Z</updated>
     
@@ -153,8 +153,8 @@
   
   <entry>
     <title>Atom - The hackable text editor</title>
-    <link href="http://blog.yuntianti.com/posts/Atom-The-hackable-text-editor/"/>
-    <id>http://blog.yuntianti.com/posts/Atom-The-hackable-text-editor/</id>
+    <link href="https://blog.yuntianti.com/posts/Atom-The-hackable-text-editor/"/>
+    <id>https://blog.yuntianti.com/posts/Atom-The-hackable-text-editor/</id>
     <published>2016-07-27T09:11:03.000Z</published>
     <updated>2018-04-05T10:22:34.595Z</updated>
     
@@ -180,17 +180,17 @@
     
     </summary>
     
-      <category term="技术" scheme="http://blog.yuntianti.com/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://blog.yuntianti.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="编辑器 js" scheme="http://blog.yuntianti.com/tags/%E7%BC%96%E8%BE%91%E5%99%A8-js/"/>
+      <category term="编辑器 js" scheme="https://blog.yuntianti.com/tags/%E7%BC%96%E8%BE%91%E5%99%A8-js/"/>
     
   </entry>
   
   <entry>
     <title>npm 私有仓库搭建</title>
-    <link href="http://blog.yuntianti.com/posts/build-private-npm-repository-server/"/>
-    <id>http://blog.yuntianti.com/posts/build-private-npm-repository-server/</id>
+    <link href="https://blog.yuntianti.com/posts/build-private-npm-repository-server/"/>
+    <id>https://blog.yuntianti.com/posts/build-private-npm-repository-server/</id>
     <published>2016-07-26T05:38:31.000Z</published>
     <updated>2018-03-17T13:13:32.873Z</updated>
     
@@ -225,8 +225,8 @@
   
   <entry>
     <title>使用 Hexo 写博客</title>
-    <link href="http://blog.yuntianti.com/posts/use-Hexo/"/>
-    <id>http://blog.yuntianti.com/posts/use-Hexo/</id>
+    <link href="https://blog.yuntianti.com/posts/use-Hexo/"/>
+    <id>https://blog.yuntianti.com/posts/use-Hexo/</id>
     <published>2016-07-04T06:05:08.000Z</published>
     <updated>2018-03-17T11:20:24.337Z</updated>
     
@@ -250,10 +250,10 @@
     
     </summary>
     
-      <category term="other" scheme="http://blog.yuntianti.com/categories/other/"/>
+      <category term="other" scheme="https://blog.yuntianti.com/categories/other/"/>
     
     
-      <category term="other" scheme="http://blog.yuntianti.com/tags/other/"/>
+      <category term="other" scheme="https://blog.yuntianti.com/tags/other/"/>
     
   </entry>
   
