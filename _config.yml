@@ -13,7 +13,7 @@ keywords: Tech Forever,博客,JavaScript,html5,css3,TyepScript,ES6,ES7,Python,Go
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://blog.yuntianti.com
+url: https://blog.yuntianti.com
 root: /
 permalink: posts/:title/
 permalink_defaults:
