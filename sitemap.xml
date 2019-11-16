@@ -2,56 +2,63 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.yuntianti.com/posts/Atom-The-hackable-text-editor/</loc>
+    
+    <lastmod>2019-11-16T03:02:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.yuntianti.com/tags/index.html</loc>
+    
+    <lastmod>2019-11-16T02:58:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.yuntianti.com/posts/django-xadmin/</loc>
     
-    <lastmod>2018-06-02T13:18:54.380Z</lastmod>
+    <lastmod>2018-06-02T13:18:54.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.yuntianti.com/posts/initd-rcd-systemd/</loc>
     
-    <lastmod>2018-06-02T13:11:39.975Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.yuntianti.com/posts/Atom-The-hackable-text-editor/</loc>
-    
-    <lastmod>2018-04-05T10:22:34.596Z</lastmod>
+    <lastmod>2018-06-02T13:11:39.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.yuntianti.com/posts/live-for-yourself/</loc>
     
-    <lastmod>2018-03-18T03:22:55.626Z</lastmod>
+    <lastmod>2018-03-18T03:22:55.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.yuntianti.com/posts/build-private-npm-repository-server/</loc>
     
-    <lastmod>2018-03-17T13:13:32.873Z</lastmod>
+    <lastmod>2018-03-17T13:13:32.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.yuntianti.com/posts/use-Hexo/</loc>
     
-    <lastmod>2018-03-17T11:20:24.337Z</lastmod>
+    <lastmod>2018-03-17T11:20:24.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.yuntianti.com/posts/RethinkDB-database-for-the-realtime/</loc>
+    <loc>https://blog.yuntianti.com/posts/use-django-wysiwyg-as-django-rich-text-editor/</loc>
     
     <lastmod>2017-06-13T03:37:25.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.yuntianti.com/posts/use-django-wysiwyg-as-django-rich-text-editor/</loc>
+    <loc>https://blog.yuntianti.com/posts/RethinkDB-database-for-the-realtime/</loc>
     
     <lastmod>2017-06-13T03:37:25.000Z</lastmod>
     
