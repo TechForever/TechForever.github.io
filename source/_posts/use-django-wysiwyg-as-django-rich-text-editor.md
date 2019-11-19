@@ -1,7 +1,10 @@
 title: 最好用的Django富文本编辑器
 date: 2016-08-04 14:57:52
-category: "Django"
+category: 技术
 tags:
+- Django
+- WYSIWYG
+- 富文本编辑器
 ---
 
 
