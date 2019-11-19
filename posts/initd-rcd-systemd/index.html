@@ -96,30 +96,21 @@
 
 
 
-<meta name="description" content="作为一名Ubuntu服务器深度用户，在Ubuntu 16.04版本之前一直使用init.d + rc.d套装来管理各种服务。
-如：Nginx, ssh, docker, supervisord等。
-Ubuntu 16.04 新增了一个服务进程管理工具 systemd。我将其理解为一个wrapper程序，封装了底层技术细节，使得交互更人性化。
-两种命令都是无需安装任何包就可以直接使用，但是更推荐使">
+<meta name="description" content="作为一名Ubuntu服务器深度用户，在Ubuntu 16.04版本之前一直使用init.d + rc.d套装来管理各种服务。 如：Nginx, ssh, docker, supervisord等。 Ubuntu 16.04 新增了一个服务进程管理工具 systemd。我将其理解为一个wrapper程序，封装了底层技术细节，使得交互更人性化。 两种命令都是无需安装任何包就可以直接使用，但是更推荐使">
+<meta name="keywords" content="Tech Forever,博客,JavaScript,html5,css3,TyepScript,ES6,ES7,Python,Go,Django,Mysql,Mongo,ElasticsearchLinux,NodeJs,Ubuntu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="init.d + rc.d VS systemd Ubuntu服务进程管理与开机自启动">
-<meta property="og:url" content="https://blog.yuntianti.com/posts/initd-rcd-systemd/index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;blog.yuntianti.com&#x2F;posts&#x2F;initd-rcd-systemd&#x2F;index.html">
 <meta property="og:site_name" content="Tech Forever">
-<meta property="og:description" content="作为一名Ubuntu服务器深度用户，在Ubuntu 16.04版本之前一直使用init.d + rc.d套装来管理各种服务。
-如：Nginx, ssh, docker, supervisord等。
-Ubuntu 16.04 新增了一个服务进程管理工具 systemd。我将其理解为一个wrapper程序，封装了底层技术细节，使得交互更人性化。
-两种命令都是无需安装任何包就可以直接使用，但是更推荐使">
-<meta property="og:image" content="http://blogqn.qixincha.com/Systemctl_tw.png">
-<meta property="og:image" content="http://blogqn.qixincha.com/48039570-955D-4C1D-BA92-5B07E39D1787.png">
-<meta property="og:image" content="http://blogqn.qixincha.com/61290685-C7D9-4A45-8C5A-EE05C9B367C0.png">
-<meta property="og:image" content="http://blogqn.qixincha.com/D4861105-42BE-4A22-8140-A7C4D16ECC2A.png">
-<meta property="og:updated_time" content="2018-06-02T13:11:39.000Z">
+<meta property="og:description" content="作为一名Ubuntu服务器深度用户，在Ubuntu 16.04版本之前一直使用init.d + rc.d套装来管理各种服务。 如：Nginx, ssh, docker, supervisord等。 Ubuntu 16.04 新增了一个服务进程管理工具 systemd。我将其理解为一个wrapper程序，封装了底层技术细节，使得交互更人性化。 两种命令都是无需安装任何包就可以直接使用，但是更推荐使">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http:&#x2F;&#x2F;blogqn.qixincha.com&#x2F;Systemctl_tw.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;blogqn.qixincha.com&#x2F;48039570-955D-4C1D-BA92-5B07E39D1787.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;blogqn.qixincha.com&#x2F;61290685-C7D9-4A45-8C5A-EE05C9B367C0.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;blogqn.qixincha.com&#x2F;D4861105-42BE-4A22-8140-A7C4D16ECC2A.png">
+<meta property="og:updated_time" content="2019-11-19T08:20:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="init.d + rc.d VS systemd Ubuntu服务进程管理与开机自启动">
-<meta name="twitter:description" content="作为一名Ubuntu服务器深度用户，在Ubuntu 16.04版本之前一直使用init.d + rc.d套装来管理各种服务。
-如：Nginx, ssh, docker, supervisord等。
-Ubuntu 16.04 新增了一个服务进程管理工具 systemd。我将其理解为一个wrapper程序，封装了底层技术细节，使得交互更人性化。
-两种命令都是无需安装任何包就可以直接使用，但是更推荐使">
-<meta name="twitter:image" content="http://blogqn.qixincha.com/Systemctl_tw.png">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;blogqn.qixincha.com&#x2F;Systemctl_tw.png">
 
 
 
@@ -225,12 +216,12 @@ Ubuntu 16.04 新增了一个服务进程管理工具 systemd。我将其理解�
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            归档
+            关于
           </a>
         </li>
       
@@ -241,6 +232,26 @@ Ubuntu 16.04 新增了一个服务进程管理工具 systemd。我将其理解�
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
           </a>
         </li>
       
@@ -329,7 +340,7 @@ Ubuntu 16.04 新增了一个服务进程管理工具 systemd。我将其理解�
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
                     <span itemprop="name">技术</span>
                   </a>
                 </span>
@@ -374,6 +385,7 @@ Ubuntu 16.04 新增了一个服务进程管理工具 systemd。我将其理解�
 <p>系统自带的各种服务，与dpkg包的默认配置的服务进程管理工具，都已迁移到systemd。足见官方对其推荐程度。</p>
 <p>那么，<code>systemd</code>和<code>init.d</code> + <code>rc.d</code>分别是如何管理服务的呢？systemd的优势又在哪里？</p>
 <a id="more"></a>
+
 <p>咋们按先后顺序介绍，先讲<code>init.d</code>和<code>rc.d</code>，再演进到<code>systemd</code>， 便对上面的问题有客观的认识了。</p>
 <p>剩下的就自己独立思考与Google吧🤪</p>
 <h2 id="init-d-Ubuntu-14-04及更早的版本中服务进程管理的正确姿势"><a href="#init-d-Ubuntu-14-04及更早的版本中服务进程管理的正确姿势" class="headerlink" title="init.d - Ubuntu 14.04及更早的版本中服务进程管理的正确姿势"></a>init.d - Ubuntu 14.04及更早的版本中服务进程管理的正确姿势</h2><p><code>service nginx reload</code> 想必大多数人都使用过类似指令。他就是用于执行各种<code>init.d</code>脚本的交互程序。</p>
@@ -408,8 +420,10 @@ Ubuntu 16.04 新增了一个服务进程管理工具 systemd。我将其理解�
 <p><strong>以上指令都依赖相应的init.d脚本</strong></p>
 <p>以上指令可用于管理<code>rc.d</code>中注册的服务，那么，rc.d又是如何工作的呢？为何注册在其中的服务就会开机自启动呢？</p>
 <ul>
-<li>首先， 看看<code>/etc</code>目录下的<code>rc*.d</code>们<br><img src="http://blogqn.qixincha.com/61290685-C7D9-4A45-8C5A-EE05C9B367C0.png" alt=""><br>我们看到有8个<code>rc*.d</code>目录 + 1个<code>rc.local</code>文件。<br>先说一下8个目录， 其对应着Ubuntu的8个runlevel。不同的操作系统，支持的允许模式略有不同。 但都会提供若干<code>rc*.d</code>目录，用于管理不同系统运行模式下需要启动/停止的服务。不同操作系统的runlevel可见参考资料中的<code>Linux Runlevel</code>链接。</li>
-<li>Ubuntu的runlevel：<ul>
+<li><p>首先， 看看<code>/etc</code>目录下的<code>rc*.d</code>们<br><img src="http://blogqn.qixincha.com/61290685-C7D9-4A45-8C5A-EE05C9B367C0.png" alt=""><br>我们看到有8个<code>rc*.d</code>目录 + 1个<code>rc.local</code>文件。<br>先说一下8个目录， 其对应着Ubuntu的8个runlevel。不同的操作系统，支持的允许模式略有不同。 但都会提供若干<code>rc*.d</code>目录，用于管理不同系统运行模式下需要启动/停止的服务。不同操作系统的runlevel可见参考资料中的<code>Linux Runlevel</code>链接。</p>
+</li>
+<li><p>Ubuntu的runlevel：</p>
+<ul>
 <li>0: 关机模式，里面一般都是停止服务的脚本（K打头）。我理解是执行关机指令时，系统会先进入这个runlevel, 然后停掉这里定义的所有服务，再最终实现安全关机。直接断电估计不会掉到这个模式里。</li>
 <li>1: 单人模式，类似Windows的安全模式， 仅启动root用户的几个必要进程，除root外的其他文件系统都不会挂载</li>
 <li>2: 无网络的多人模式，网络相关服务都不会启动，网卡也不会自动ifconfig。至于多人模式，Unix/Linux都是多任务多用户操作系统，同一时间点是允许有多个用户在系统中开多个shell的。Windows桌面版这种单用户操作系统需要退出再切换。</li>
@@ -432,38 +446,35 @@ Ubuntu 16.04 新增了一个服务进程管理工具 systemd。我将其理解�
 </li>
 <li><p>开机时作业顺序如下： 内核加载完毕 -&gt; <code>/sbin/init</code>进程启动 -&gt; 挨个调起对应运行模式下的<code>rc.d</code>中注册的服务的对应函数 -&gt; 若注册了<code>S0xrc.local</code>信息会调起<code>/etc/rc.local</code>脚本</p>
 </li>
-<li>而关机/重启作业顺序如下： <code>/sbin/init</code>进程收到关机/重启信号 -&gt; 挨个调起对应运行模式下的<code>rc.d</code>中注册的服务的对应函数（关机模式也可以注册S信息，只要业务需求） -&gt; 最终关闭内核</li>
+<li><p>而关机/重启作业顺序如下： <code>/sbin/init</code>进程收到关机/重启信号 -&gt; 挨个调起对应运行模式下的<code>rc.d</code>中注册的服务的对应函数（关机模式也可以注册S信息，只要业务需求） -&gt; 最终关闭内核</p>
+</li>
 </ul>
 <h2 id="systemd-更人性化的服务进程管理工具"><a href="#systemd-更人性化的服务进程管理工具" class="headerlink" title="systemd - 更人性化的服务进程管理工具"></a>systemd - 更人性化的服务进程管理工具</h2><ul>
 <li><p>systemd主要改进是在人机交互与注册方式上，底层的作用原理上没有太多变化。我更倾向于把他理解为<code>init.d</code>脚本的一个wrapper程序,当使用systemd时注册与调用方式如下：</p>
 <ol>
 <li><p>systemd配置文件地址，类似init.d的/etc/init.d/目录：</p>
-<pre><code>/lib/systemd/system/
-</code></pre></li>
-<li>执行以下命令前，需确保 <code>/etc/init.d/</code> 或 <code>/lib/systemd/system/</code> 下有对应服务的管理脚本。<br>相关脚本一般都可google到，比如：<a href="https://github.com/zokeber/supervisor-systemd/blob/master/etc/systemd/system/supervisord.service" target="_blank" rel="external">https://github.com/zokeber/supervisor-systemd/blob/master/etc/systemd/system/supervisord.service</a><br>也可以自己参考着现有脚本写</li>
+<pre><code>/lib/systemd/system/</code></pre></li>
+<li><p>执行以下命令前，需确保 <code>/etc/init.d/</code> 或 <code>/lib/systemd/system/</code> 下有对应服务的管理脚本。<br>相关脚本一般都可google到，比如：<a href="https://github.com/zokeber/supervisor-systemd/blob/master/etc/systemd/system/supervisord.service" target="_blank" rel="noopener">https://github.com/zokeber/supervisor-systemd/blob/master/etc/systemd/system/supervisord.service</a><br>也可以自己参考着现有脚本写</p>
+</li>
 <li><p>开机自启动，也会对应的写到rc.d中：</p>
-<pre><code>systemctl enable nginx
-</code></pre></li>
+<pre><code>systemctl enable nginx</code></pre></li>
 <li><p>查看所有的开机自启动：</p>
-<pre><code>systemctl list-unit-files | grep enabled
-</code></pre></li>
+<pre><code>systemctl list-unit-files | grep enabled</code></pre></li>
 <li><p>移除开机自启动， 也会对应的写到rc.d中：</p>
-<pre><code>systemctl disable nginx
-</code></pre></li>
+<pre><code>systemctl disable nginx</code></pre></li>
 <li><p>管理服务：</p>
 <pre><code>systemctl reload nginx
 systemctl restart nginx
-systemctl stop nginx
-</code></pre></li>
+systemctl stop nginx</code></pre></li>
 </ol>
 </li>
 <li><p>我们发现使用systemd后， 无需再关注底层的<code>init.d</code> 与 <code>rc.d</code>的工作原理与相互关系。该程序封装了底层技术细节，使得交互更人性化。</p>
 </li>
 </ul>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-commands.html" target="_blank" rel="external">Systemd 入门教程：命令篇 - 阮一峰</a></li>
-<li><a href="http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-part-two.html" target="_blank" rel="external">Systemd 入门教程：实战篇 - 阮一峰</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Runlevel" target="_blank" rel="external">维基百科：Linux Runlevel</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-commands.html" target="_blank" rel="noopener">Systemd 入门教程：命令篇 - 阮一峰</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-part-two.html" target="_blank" rel="noopener">Systemd 入门教程：实战篇 - 阮一峰</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Runlevel" target="_blank" rel="noopener">维基百科：Linux Runlevel</a></li>
 </ul>
 
       
@@ -486,7 +497,7 @@ systemctl stop nginx
           
             <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
           
-            <a href="/tags/服务进程管理/" rel="tag"># 服务进程管理</a>
+            <a href="/tags/%E6%9C%8D%E5%8A%A1%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/" rel="tag"># 服务进程管理</a>
           
         </div>
       
@@ -596,10 +607,10 @@ systemctl stop nginx
             
             
             <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">4</span>
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
@@ -608,7 +619,7 @@ systemctl stop nginx
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -700,12 +711,12 @@ systemctl stop nginx
 
 
 <div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
     NexT.Mist
   </a>
   <span class="icp">

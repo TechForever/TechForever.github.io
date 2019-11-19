@@ -96,49 +96,16 @@
 
 
 
-<meta name="description" content="为什么用Hexo
-静态博客，部署在 github 上，不需要数据库，部署和迁移方便
-使用 github 管理代码，我们都用 github，协作方便
-博客使用 markdown 格式存储，方便编辑
-有许许多多的插件，扩展方便
-
-使用
-安装 node 和 Hexo
-安装 Burnish 博客
-写博客
-发布
-保存源码">
+<meta name="description" content="为什么用Hexo 静态博客，部署在 github 上，不需要数据库，部署和迁移方便 使用 github 管理代码，我们都用 github，协作方便 博客使用 markdown 格式存储，方便编辑 有许许多多的插件，扩展方便  使用 安装 node 和 Hexo 安装 Burnish 博客 写博客 发布 保存源码">
+<meta name="keywords" content="other">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用 Hexo 写博客">
-<meta property="og:url" content="https://blog.yuntianti.com/posts/use-Hexo/index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;blog.yuntianti.com&#x2F;posts&#x2F;use-Hexo&#x2F;index.html">
 <meta property="og:site_name" content="Tech Forever">
-<meta property="og:description" content="为什么用Hexo
-静态博客，部署在 github 上，不需要数据库，部署和迁移方便
-使用 github 管理代码，我们都用 github，协作方便
-博客使用 markdown 格式存储，方便编辑
-有许许多多的插件，扩展方便
-
-使用
-安装 node 和 Hexo
-安装 Burnish 博客
-写博客
-发布
-保存源码">
-<meta property="og:updated_time" content="2018-03-17T11:20:24.000Z">
+<meta property="og:description" content="为什么用Hexo 静态博客，部署在 github 上，不需要数据库，部署和迁移方便 使用 github 管理代码，我们都用 github，协作方便 博客使用 markdown 格式存储，方便编辑 有许许多多的插件，扩展方便  使用 安装 node 和 Hexo 安装 Burnish 博客 写博客 发布 保存源码">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-11-19T08:20:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用 Hexo 写博客">
-<meta name="twitter:description" content="为什么用Hexo
-静态博客，部署在 github 上，不需要数据库，部署和迁移方便
-使用 github 管理代码，我们都用 github，协作方便
-博客使用 markdown 格式存储，方便编辑
-有许许多多的插件，扩展方便
-
-使用
-安装 node 和 Hexo
-安装 Burnish 博客
-写博客
-发布
-保存源码">
 
 
 
@@ -244,12 +211,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            归档
+            关于
           </a>
         </li>
       
@@ -260,6 +227,26 @@
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
           </a>
         </li>
       
@@ -399,11 +386,14 @@
 <li>保存源码</li>
 </ol>
 <a id="more"></a>
-<h3 id="安装-node-和-Hexo"><a href="#安装-node-和-Hexo" class="headerlink" title="安装 node 和 Hexo"></a>安装 node 和 Hexo</h3><p><a href="https://hexo.io/docs/" target="_blank" rel="external">Hexo 安装教程</a><br>推荐使用 nvm 来安装 <a href="https://github.com/creationix/nvm" target="_blank" rel="external">https://github.com/creationix/nvm</a></p>
-<h3 id="安装博客"><a href="#安装博客" class="headerlink" title="安装博客"></a>安装博客</h3><figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># clone 代码</span></div><div class="line">git clone https:<span class="comment">//github.com/TechForever/TechForever.github.io.git blog</span></div><div class="line"></div><div class="line"><span class="meta"># 更新 git submodule 管理的主题</span></div><div class="line">git submodule update --init --recursive</div><div class="line"></div><div class="line"><span class="meta"># 在全局安装hexo命令行工具</span></div><div class="line">npm install hexo -g</div><div class="line"></div><div class="line"><span class="meta"># 安装依赖</span></div><div class="line">cd blog &amp;&amp; git checkout source &amp;&amp; npm install</div><div class="line"></div><div class="line"><span class="meta"># 生成博客</span></div><div class="line">hexo generate --watch</div><div class="line"></div><div class="line"><span class="meta"># 预览</span></div><div class="line">hexo server</div></pre></td></tr></table></figure>
-<h3 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h3><figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># 生成新的 markdown 文件，在 source/_post/ 文件夹下</span></div><div class="line">hexo <span class="keyword">new</span> <span class="string">"your title"</span></div><div class="line"></div><div class="line"><span class="meta"># 写博客，markdown 语法</span></div><div class="line">vim source/_post/your title.md</div><div class="line"></div><div class="line"><span class="meta"># 生成博客</span></div><div class="line">hexo generate --watch</div><div class="line"></div><div class="line"><span class="meta"># 预览</span></div><div class="line">hexo server</div><div class="line"></div><div class="line"><span class="meta"># 发布</span></div><div class="line">hexo deploy</div><div class="line"></div><div class="line"><span class="meta"># 将代码 push 到 source 分支</span></div><div class="line">git push origin source:source</div></pre></td></tr></table></figure>
+
+<h3 id="安装-node-和-Hexo"><a href="#安装-node-和-Hexo" class="headerlink" title="安装 node 和 Hexo"></a>安装 node 和 Hexo</h3><p><a href="https://hexo.io/docs/" target="_blank" rel="noopener">Hexo 安装教程</a><br>推荐使用 nvm 来安装 <a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">https://github.com/creationix/nvm</a></p>
+<h3 id="安装博客"><a href="#安装博客" class="headerlink" title="安装博客"></a>安装博客</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># clone 代码</span></span><br><span class="line">git clone https://github.com/TechForever/TechForever.github.io.git blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 更新 git submodule 管理的主题</span></span><br><span class="line">git submodule <span class="keyword">update</span> <span class="comment">--init --recursive</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在全局安装hexo命令行工具</span></span><br><span class="line">npm <span class="keyword">install</span> hexo -g</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装依赖</span></span><br><span class="line">cd blog &amp;&amp; git checkout <span class="keyword">source</span> &amp;&amp; npm <span class="keyword">install</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成博客</span></span><br><span class="line">hexo generate <span class="comment">--watch</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 预览</span></span><br><span class="line">hexo <span class="keyword">server</span></span><br></pre></td></tr></table></figure>
+<h3 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成新的 markdown 文件，在 source/_post/ 文件夹下</span></span><br><span class="line">hexo new <span class="string">"your title"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 写博客，markdown 语法</span></span><br><span class="line">vim source/_post/your title.md</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成博客</span></span><br><span class="line">hexo generate --watch</span><br><span class="line"></span><br><span class="line"><span class="comment"># 预览</span></span><br><span class="line">hexo server</span><br><span class="line"></span><br><span class="line"><span class="comment"># 发布</span></span><br><span class="line">hexo deploy</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将代码 push 到 source 分支</span></span><br><span class="line">git push origin source:source</span><br></pre></td></tr></table></figure>
+
 <h3 id="master-和-source-分支的区别"><a href="#master-和-source-分支的区别" class="headerlink" title="master 和 source 分支的区别"></a>master 和 source 分支的区别</h3><p>master 分支是 github pages 展示的静态资源文件，这些文件是由 source 分支的源代码生成的<br>有更新需要随时 push 到 github 的 source 分支</p>
-<h3 id="使用-git-submodule-来管理主题"><a href="#使用-git-submodule-来管理主题" class="headerlink" title="使用 git submodule 来管理主题"></a>使用 git submodule 来管理主题</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"># 添加 submodule，submodule 已经 fork 到了 Tech Forever 团队</div><div class="line">git submodule <span class="built_in">add</span> http<span class="variable">s:</span>//github.<span class="keyword">com</span>/TechForever/hexo-theme-<span class="keyword">next</span>.git</div><div class="line"></div><div class="line"># 更新主题配置</div><div class="line"><span class="keyword">cd</span> themes/<span class="keyword">next</span></div><div class="line"><span class="keyword">vim</span> _config.yml</div><div class="line">git commit -<span class="keyword">a</span></div><div class="line">git push</div><div class="line"></div><div class="line"># 其他命令参考 http<span class="variable">s:</span>//git-scm.<span class="keyword">com</span>/book/zh/v2/Git-工具-子模块</div></pre></td></tr></table></figure>
+<h3 id="使用-git-submodule-来管理主题"><a href="#使用-git-submodule-来管理主题" class="headerlink" title="使用 git submodule 来管理主题"></a>使用 git submodule 来管理主题</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 添加 submodule，submodule 已经 fork 到了 Tech Forever 团队</span><br><span class="line">git submodule <span class="built_in">add</span> http<span class="variable">s:</span>//github.<span class="keyword">com</span>/TechForever/hexo-theme-<span class="keyword">next</span>.git</span><br><span class="line"></span><br><span class="line"># 更新主题配置</span><br><span class="line"><span class="keyword">cd</span> themes/<span class="keyword">next</span></span><br><span class="line"><span class="keyword">vim</span> _config.yml</span><br><span class="line">git commit -<span class="keyword">a</span></span><br><span class="line">git push</span><br><span class="line"></span><br><span class="line"># 其他命令参考 http<span class="variable">s:</span>//git-scm.<span class="keyword">com</span>/book/zh/v2/Git-工具-子模块</span><br></pre></td></tr></table></figure>
+
 <h2 id="Trouble-Shotting"><a href="#Trouble-Shotting" class="headerlink" title="Trouble Shotting"></a>Trouble Shotting</h2><ul>
 <li><code>hexo generate</code> 时报 <code>hightlight.js</code> 异常<ul>
 <li>将 <code>_config.yml</code> 中的 auto_detect 置为 <code>false</code> 再执行 <code>hexo generate</code>。 成功后再将其置回 <code>true</code>（开启代码高亮功能）。</li>
@@ -412,14 +402,15 @@
 </ul>
 <ul>
 <li><p>每次更新 source 时务必将 submodule 也同时更新, 否则有可能导致 submodule 的版本被覆盖</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">git checkout source</div><div class="line">git pull <span class="comment">--rebase origin source</span></div><div class="line">git submodule <span class="keyword">update</span> <span class="comment">--recursive</span></div></pre></td></tr></table></figure>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">git checkout source</span><br><span class="line">git pull <span class="comment">--rebase origin source</span></span><br><span class="line">git submodule <span class="keyword">update</span> <span class="comment">--recursive</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>如何同时 push submodule</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git</span> push --recurse-submodules=<span class="literal">on</span>-demand</div></pre></td></tr></table></figure>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git</span> push --recurse-submodules=<span class="literal">on</span>-demand</span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
-<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><p><a href="https://hexo.io" target="_blank" rel="external">hexo</a><br><a href="https://github.com/tufu9441/maupassant-hexo" target="_blank" rel="external">主题 maupassant</a><br><a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">主题 Next</a></p>
-<h2 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h2><p>文章排版参照 <a href="https://github.com/sparanoid/chinese-copywriting-guidelines" target="_blank" rel="external">中文文案排版指北</a></p>
+<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><p><a href="https://hexo.io" target="_blank" rel="noopener">hexo</a><br><a href="https://github.com/tufu9441/maupassant-hexo" target="_blank" rel="noopener">主题 maupassant</a><br><a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">主题 Next</a></p>
+<h2 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h2><p>文章排版参照 <a href="https://github.com/sparanoid/chinese-copywriting-guidelines" target="_blank" rel="noopener">中文文案排版指北</a></p>
 
       
     </div>
@@ -547,10 +538,10 @@
             
             
             <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">4</span>
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
@@ -559,7 +550,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -651,12 +642,12 @@
 
 
 <div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
     NexT.Mist
   </a>
   <span class="icp">

@@ -97,18 +97,18 @@
 
 
 <meta name="description" content="RethinkDB 是一个为构建实时应用程序而生的开源数据库，它可以实时地向你的应用程序推送数据">
+<meta name="keywords" content="Tech Forever,博客,JavaScript,html5,css3,TyepScript,ES6,ES7,Python,Go,Django,Mysql,Mongo,ElasticsearchLinux,NodeJs,Ubuntu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="RethinkDB 实时数据库">
-<meta property="og:url" content="https://blog.yuntianti.com/posts/RethinkDB-database-for-the-realtime/index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;blog.yuntianti.com&#x2F;posts&#x2F;RethinkDB-database-for-the-realtime&#x2F;index.html">
 <meta property="og:site_name" content="Tech Forever">
 <meta property="og:description" content="RethinkDB 是一个为构建实时应用程序而生的开源数据库，它可以实时地向你的应用程序推送数据">
-<meta property="og:image" content="http://img.l.jifangcheng.com/rethinkdb-1.png">
-<meta property="og:image" content="http://img.l.jifangcheng.com/rethinkdb-2.png">
-<meta property="og:updated_time" content="2017-06-13T03:37:25.000Z">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http:&#x2F;&#x2F;img.l.jifangcheng.com&#x2F;rethinkdb-1.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;img.l.jifangcheng.com&#x2F;rethinkdb-2.png">
+<meta property="og:updated_time" content="2019-11-19T08:20:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RethinkDB 实时数据库">
-<meta name="twitter:description" content="RethinkDB 是一个为构建实时应用程序而生的开源数据库，它可以实时地向你的应用程序推送数据">
-<meta name="twitter:image" content="http://img.l.jifangcheng.com/rethinkdb-1.png">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;img.l.jifangcheng.com&#x2F;rethinkdb-1.png">
 
 
 
@@ -214,12 +214,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            归档
+            关于
           </a>
         </li>
       
@@ -230,6 +230,26 @@
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
           </a>
         </li>
       
@@ -336,73 +356,91 @@
         <p>RethinkDB 是一个为构建实时应用程序而生的开源数据库，它可以实时地向你的应用程序推送数据</p>
 <p><img src="http://img.l.jifangcheng.com/rethinkdb-1.png" alt=""></p>
 <a id="more"></a>
+
 <h2 id="什么是-RethinkDB"><a href="#什么是-RethinkDB" class="headerlink" title="什么是 RethinkDB"></a>什么是 RethinkDB</h2><ul>
 <li>一个为构建实时应用程序而生的开源数据库</li>
 <li>NoSQL 非关系型数据库，它存储 JSON 数据</li>
 <li>易拓展的分布式数据库</li>
 <li>拥有自动故障转移和强大容错能力的高性能数据库</li>
 </ul>
-<h2 id="RethinkDB-X-Python-快速开始"><a href="#RethinkDB-X-Python-快速开始" class="headerlink" title="RethinkDB X Python 快速开始"></a>RethinkDB X Python 快速开始</h2><h3 id="安装-RethinkDB"><a href="#安装-RethinkDB" class="headerlink" title="安装 RethinkDB"></a>安装 RethinkDB</h3><p>macOS 可以使用 <code>brew install rethinkdb</code> 来快速安装 RethinkDB，其它的系统可以看官网的文档 <a href="https://rethinkdb.com/docs/install/" target="_blank" rel="external">https://rethinkdb.com/docs/install/</a></p>
+<h2 id="RethinkDB-X-Python-快速开始"><a href="#RethinkDB-X-Python-快速开始" class="headerlink" title="RethinkDB X Python 快速开始"></a>RethinkDB X Python 快速开始</h2><h3 id="安装-RethinkDB"><a href="#安装-RethinkDB" class="headerlink" title="安装 RethinkDB"></a>安装 RethinkDB</h3><p>macOS 可以使用 <code>brew install rethinkdb</code> 来快速安装 RethinkDB，其它的系统可以看官网的文档 <a href="https://rethinkdb.com/docs/install/" target="_blank" rel="noopener">https://rethinkdb.com/docs/install/</a></p>
 <h3 id="安装-Python-连接-RethinkDB-的库"><a href="#安装-Python-连接-RethinkDB-的库" class="headerlink" title="安装 Python 连接 RethinkDB 的库"></a>安装 Python 连接 RethinkDB 的库</h3><p>使用 pip 就可以了 <code>pip install rethinkdb</code></p>
 <h3 id="使用-RethinkDB"><a href="#使用-RethinkDB" class="headerlink" title="使用 RethinkDB"></a>使用 RethinkDB</h3><ul>
 <li>首先启动 RethinkDB</li>
 </ul>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>rethinkdb</div></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>rethinkdb</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>在 python 里面引入 RethinkDB 的库就可以操作它了</li>
 </ul>
-<figure class="highlight elm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ python</div><div class="line"></div><div class="line">&gt;&gt;&gt; <span class="keyword">import</span> rethinkdb <span class="keyword">as</span> r</div></pre></td></tr></table></figure>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ python</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; <span class="keyword">import</span> rethinkdb <span class="keyword">as</span> r</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>连接数据库</li>
 </ul>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">r<span class="selector-class">.connect</span>(<span class="string">"localhost"</span>, <span class="number">28015</span>)<span class="selector-class">.repl</span>()</div></pre></td></tr></table></figure>
-<p><em>注意：<code>repl</code> 方法仅适合在 shell 里面调试使用，它会给你当前的 shell 环境设置一个默认的连接，使得你不用每次都给 <code>run</code> 方法传一个 <code>connection</code> 对象进去。但是，在生产环境中你不能使用这种方法，你执行的每个查询命令都必须要给 <code>run</code> 方法传一个 <code>connection</code> 对象进去，你可以看一下这个<a href="https://github.com/rethinkdb/rethinkdb-example-flask-backbone-todo/blob/master/todo.py" target="_blank" rel="external">简单的示例</a></em></p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">r</span><span class="selector-class">.connect</span>(<span class="string">"localhost"</span>, <span class="number">28015</span>)<span class="selector-class">.repl</span>()</span><br></pre></td></tr></table></figure>
+
+<p><em>注意：<code>repl</code> 方法仅适合在 shell 里面调试使用，它会给你当前的 shell 环境设置一个默认的连接，使得你不用每次都给 <code>run</code> 方法传一个 <code>connection</code> 对象进去。但是，在生产环境中你不能使用这种方法，你执行的每个查询命令都必须要给 <code>run</code> 方法传一个 <code>connection</code> 对象进去，你可以看一下这个<a href="https://github.com/rethinkdb/rethinkdb-example-flask-backbone-todo/blob/master/todo.py" target="_blank" rel="noopener">简单的示例</a></em></p>
 <ul>
 <li>创建一张表</li>
 </ul>
 <p>在 <code>test</code> 数据库里创建一张 <code>authors</code> 表</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">r<span class="selector-class">.db</span>(<span class="string">"test"</span>)<span class="selector-class">.table_create</span>(<span class="string">"authors"</span>)<span class="selector-class">.run</span>()</div></pre></td></tr></table></figure>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">r</span><span class="selector-class">.db</span>(<span class="string">"test"</span>)<span class="selector-class">.table_create</span>(<span class="string">"authors"</span>)<span class="selector-class">.run</span>()</span><br></pre></td></tr></table></figure>
+
 <p>你应该会得到和下面类似的结果：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"config_changes"</span>: [</div><div class="line">        &lt;table configuration data&gt;</div><div class="line">    ],</div><div class="line">    <span class="attr">"tables_created"</span>: <span class="number">1</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"config_changes"</span>: [</span><br><span class="line">        &lt;table configuration data&gt;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">"tables_created"</span>: <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p><em>RethinkDB 默认创建了一个名为 <code>test</code> 的数据库，你可以使用 <code>r.db_create(db_name)</code> 来创建一个数据库</em></p>
 <h4 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h4><p>使用 <code>insert()</code> 方法来插入数据，插入的数据都是 JSON 格式的</p>
-<figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">r.table(<span class="string">"authors"</span>).<span class="keyword">insert</span>([</div><div class="line">    &#123; <span class="string">"name"</span>: <span class="string">"William Adama"</span>, <span class="string">"tv_show"</span>: <span class="string">"Battlestar Galactica"</span>,</div><div class="line">      <span class="string">"posts"</span>: [</div><div class="line">        &#123;<span class="string">"title"</span>: <span class="string">"Decommissioning speech"</span>, <span class="string">"content"</span>: <span class="string">"The Cylon War is long over..."</span>&#125;,</div><div class="line">        &#123;<span class="string">"title"</span>: <span class="string">"We are at war"</span>, <span class="string">"content"</span>: <span class="string">"Moments ago, this ship received..."</span>&#125;</div><div class="line">      ]</div><div class="line">    &#125;,</div><div class="line">    &#123; <span class="string">"name"</span>: <span class="string">"Laura Roslin"</span>, <span class="string">"tv_show"</span>: <span class="string">"Battlestar Galactica"</span>,</div><div class="line">      <span class="string">"posts"</span>: [</div><div class="line">        &#123;<span class="string">"title"</span>: <span class="string">"The oath of office"</span>, <span class="string">"content"</span>: <span class="string">"I, Laura Roslin, ..."</span>&#125;,</div><div class="line">        &#123;<span class="string">"title"</span>: <span class="string">"They look like us"</span>, <span class="string">"content"</span>: <span class="string">"The Cylons have the ability..."</span>&#125;</div><div class="line">      ]</div><div class="line">    &#125;</div><div class="line">]).run()</div></pre></td></tr></table></figure>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">r.table(<span class="string">"authors"</span>).insert([</span><br><span class="line">    &#123; <span class="string">"name"</span>: <span class="string">"William Adama"</span>, <span class="string">"tv_show"</span>: <span class="string">"Battlestar Galactica"</span>,</span><br><span class="line">      <span class="string">"posts"</span>: [</span><br><span class="line">        &#123;<span class="string">"title"</span>: <span class="string">"Decommissioning speech"</span>, <span class="string">"content"</span>: <span class="string">"The Cylon War is long over..."</span>&#125;,</span><br><span class="line">        &#123;<span class="string">"title"</span>: <span class="string">"We are at war"</span>, <span class="string">"content"</span>: <span class="string">"Moments ago, this ship received..."</span>&#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123; <span class="string">"name"</span>: <span class="string">"Laura Roslin"</span>, <span class="string">"tv_show"</span>: <span class="string">"Battlestar Galactica"</span>,</span><br><span class="line">      <span class="string">"posts"</span>: [</span><br><span class="line">        &#123;<span class="string">"title"</span>: <span class="string">"The oath of office"</span>, <span class="string">"content"</span>: <span class="string">"I, Laura Roslin, ..."</span>&#125;,</span><br><span class="line">        &#123;<span class="string">"title"</span>: <span class="string">"They look like us"</span>, <span class="string">"content"</span>: <span class="string">"The Cylons have the ability..."</span>&#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">]).run()</span><br></pre></td></tr></table></figure>
+
 <p><em>注意：因为我们上面连接时使用了 <code>repl</code> 方法，所以这里的 <code>run</code> 不用传一个 <code>connection</code> 对象进去。但是生产环境里面不能使用这种方法，下面是生产环境应该使用的方法的一个示例</em></p>
-<figure class="highlight nix"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">rdb_conn</span> = r.connect(<span class="attr">host=RDB_HOST,</span> <span class="attr">port=RDB_PORT,</span> <span class="attr">db=DB)</span></div><div class="line"></div><div class="line">r.table(<span class="string">"authors"</span>).insert(……).run(rdb_conn)</div></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rdb_conn = r.connect(<span class="attribute">host</span>=RDB_HOST, <span class="attribute">port</span>=RDB_PORT, <span class="attribute">db</span>=DB)</span><br><span class="line"></span><br><span class="line">r.table(<span class="string">"authors"</span>).insert(……).<span class="builtin-name">run</span>(rdb_conn)</span><br></pre></td></tr></table></figure>
+
 <h4 id="数据查询"><a href="#数据查询" class="headerlink" title="数据查询"></a>数据查询</h4><ul>
 <li>查询所有数据</li>
 </ul>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cursor = r.table(<span class="string">"authors"</span>).run()</div><div class="line"><span class="keyword">for</span> <span class="built_in">document</span> <span class="keyword">in</span> cursor:</div><div class="line">    <span class="built_in">print</span>(<span class="built_in">document</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cursor</span> = r.table(<span class="string">"authors"</span>).<span class="built_in">run</span>()</span><br><span class="line"><span class="keyword">for</span> document in <span class="built_in">cursor</span>:</span><br><span class="line">    <span class="built_in">print</span>(document)</span><br></pre></td></tr></table></figure>
+
 <p>这个操作会返回 <code>authors</code> 表里面的所有数据，每条数据都会附带它的 <code>id</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;<span class="string">u'name'</span>: <span class="string">u'hello'</span>, <span class="string">u'id'</span>: <span class="string">u'6ca50999-75eb-4af4-b9b0-bbac478dc884'</span>&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">u'name'</span>: <span class="string">u'hello'</span>, <span class="string">u'id'</span>: <span class="string">u'6ca50999-75eb-4af4-b9b0-bbac478dc884'</span>&#125;</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>条件查询</li>
 </ul>
 <p>下面的操作会返回 <code>name</code> 是 <code>William Adama</code> 的数据</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cursor = r.table(<span class="string">"authors"</span>).filter(r.row[<span class="string">"name"</span>] == <span class="string">"William Adama"</span>).run()</div><div class="line"><span class="keyword">for</span> <span class="built_in">document</span> <span class="keyword">in</span> cursor:</div><div class="line">    <span class="built_in">print</span>(<span class="built_in">document</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cursor</span> = r.table(<span class="string">"authors"</span>).filter(r.row[<span class="string">"name"</span>] == <span class="string">"William Adama"</span>).<span class="built_in">run</span>()</span><br><span class="line"><span class="keyword">for</span> document in <span class="built_in">cursor</span>:</span><br><span class="line">    <span class="built_in">print</span>(document)</span><br></pre></td></tr></table></figure>
+
 <p>下面的操作会返回数据里面 <code>posts</code> 大于 2 条记录的数据</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cursor = r.<span class="keyword">table</span>(<span class="string">"authors"</span>).filter(r.row[<span class="string">"posts"</span>].<span class="keyword">count</span>() &gt; 2).<span class="keyword">run</span>()</div><div class="line"><span class="keyword">for</span> document <span class="keyword">in</span> cursor:</div><div class="line">    <span class="keyword">print</span>(document)</div></pre></td></tr></table></figure>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cursor</span> = r.table(<span class="string">"authors"</span>).<span class="built_in">filter</span>(r.row[<span class="string">"posts"</span>].<span class="built_in">count</span>() &gt; <span class="number">2</span>).run()</span><br><span class="line"><span class="keyword">for</span> document in <span class="built_in">cursor</span>:</span><br><span class="line">    <span class="keyword">print</span>(document)</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>查询单条记录</li>
 </ul>
 <p>查询 <code>id</code> 为 <code>7644aaf2-9928-4231-aa68-4e65e31bf219</code> 的数据</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">r<span class="selector-class">.db</span>(<span class="string">'test'</span>)<span class="selector-class">.table</span>(<span class="string">'authors'</span>)<span class="selector-class">.get</span>(<span class="string">'7644aaf2-9928-4231-aa68-4e65e31bf219'</span>)<span class="selector-class">.run</span>()</div></pre></td></tr></table></figure>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">r</span><span class="selector-class">.db</span>(<span class="string">'test'</span>)<span class="selector-class">.table</span>(<span class="string">'authors'</span>)<span class="selector-class">.get</span>(<span class="string">'7644aaf2-9928-4231-aa68-4e65e31bf219'</span>)<span class="selector-class">.run</span>()</span><br></pre></td></tr></table></figure>
+
 <h4 id="实时数据"><a href="#实时数据" class="headerlink" title="实时数据"></a>实时数据</h4><p>使用 <code>changes()</code> 方法来监听数据的变化</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cursor = r.table(<span class="string">"authors"</span>).changes().run()</div><div class="line"><span class="keyword">for</span> <span class="built_in">document</span> <span class="keyword">in</span> cursor:</div><div class="line">    <span class="built_in">print</span>(<span class="built_in">document</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cursor</span> = r.table(<span class="string">"authors"</span>).changes().<span class="built_in">run</span>()</span><br><span class="line"><span class="keyword">for</span> document in <span class="built_in">cursor</span>:</span><br><span class="line">    <span class="built_in">print</span>(document)</span><br></pre></td></tr></table></figure>
+
 <h4 id="更新数据"><a href="#更新数据" class="headerlink" title="更新数据"></a>更新数据</h4><p>使用 <code>update()</code> 方法来删除数据</p>
 <p>更新所有数据</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">r.<span class="keyword">table</span>(<span class="string">"authors"</span>).<span class="keyword">update</span>(&#123;<span class="string">"type"</span>: <span class="string">"fictional"</span>&#125;).<span class="keyword">run</span>()</div></pre></td></tr></table></figure>
+<figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">r.<span class="meta">table</span>(<span class="string">"authors"</span>).u<span class="meta">pdate(</span>&#123;<span class="string">"type"</span>: <span class="string">"fictional"</span>&#125;).r<span class="meta">un(</span>)</span><br></pre></td></tr></table></figure>
+
 <p>结合 <code>filter</code> 更新指定数据</p>
-<figure class="highlight prolog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">r.table(<span class="string">"authors"</span>).</div><div class="line">    filter(r.row[<span class="string">'name'</span>] == <span class="string">"William Adama"</span>).</div><div class="line">    update(&#123;<span class="string">"rank"</span>: <span class="string">"Admiral"</span>&#125;).run()</div></pre></td></tr></table></figure>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">r.<span class="keyword">table</span>("authors").</span><br><span class="line">    <span class="keyword">filter</span>(r.<span class="keyword">row</span>[<span class="string">'name'</span>] == "William Adama").</span><br><span class="line">    <span class="keyword">update</span>(&#123;"rank": "Admiral"&#125;).run()</span><br></pre></td></tr></table></figure>
+
 <p>更新数组的数据</p>
-<figure class="highlight prolog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">r.table(<span class="string">'authors'</span>).filter(r.row[<span class="string">"name"</span>] == <span class="string">"Jean-Luc Picard"</span>).</div><div class="line">    update(&#123;<span class="string">"posts"</span>: r.row[<span class="string">"posts"</span>].append(&#123;</div><div class="line">        <span class="string">"title"</span>: <span class="string">"Shakespeare"</span>,</div><div class="line">        <span class="string">"content"</span>: <span class="string">"What a piece of work is man..."</span>&#125;)</div><div class="line">    &#125;).run()</div></pre></td></tr></table></figure>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">r.<span class="keyword">table</span>(<span class="string">'authors'</span>).<span class="keyword">filter</span>(r.<span class="keyword">row</span>["name"] == "Jean-Luc Picard").</span><br><span class="line">    <span class="keyword">update</span>(&#123;"posts": r.<span class="keyword">row</span>["posts"].append(&#123;</span><br><span class="line">        "title": "Shakespeare",</span><br><span class="line">        "content": "What a piece of work is man..."&#125;)</span><br><span class="line">    &#125;).run()</span><br></pre></td></tr></table></figure>
+
 <h4 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h4><p>使用 <code>delete()</code> 方法来删除数据</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">r<span class="selector-class">.table</span>(<span class="string">"authors"</span>).</div><div class="line">    <span class="selector-tag">filter</span>( r.row[<span class="string">"posts"</span>].count() &lt; <span class="number">3</span> ).</div><div class="line">    <span class="selector-tag">delete</span>()<span class="selector-class">.run</span>()</div></pre></td></tr></table></figure>
-<h2 id="RethinkDB-驱动"><a href="#RethinkDB-驱动" class="headerlink" title="RethinkDB 驱动"></a>RethinkDB 驱动</h2><p>RethinkDB 官方提供了对 JavaScript, Python, Ruby, Java 四种语言的支持，还有很多社区贡献的第三方的对其它语言的支持，你可以在下面的这个网址里面找到<br><a href="https://rethinkdb.com/docs/install-drivers/" target="_blank" rel="external">https://rethinkdb.com/docs/install-drivers/</a></p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">r.<span class="keyword">table</span>("authors").</span><br><span class="line">    <span class="keyword">filter</span>( r.<span class="keyword">row</span>["posts"].count() &lt; <span class="number">3</span> ).</span><br><span class="line">    <span class="keyword">delete</span>().run()</span><br></pre></td></tr></table></figure>
+
+<h2 id="RethinkDB-驱动"><a href="#RethinkDB-驱动" class="headerlink" title="RethinkDB 驱动"></a>RethinkDB 驱动</h2><p>RethinkDB 官方提供了对 JavaScript, Python, Ruby, Java 四种语言的支持，还有很多社区贡献的第三方的对其它语言的支持，你可以在下面的这个网址里面找到<br><a href="https://rethinkdb.com/docs/install-drivers/" target="_blank" rel="noopener">https://rethinkdb.com/docs/install-drivers/</a></p>
 <h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
-<li><a href="https://rethinkdb.com" target="_blank" rel="external">RethinkDB: the open-source database for the realtime web</a></li>
-<li><a href="https://rethinkdb.com/docs/" target="_blank" rel="external">RethinkDB Documentation</a></li>
-<li><a href="https://github.com/rethinkdb/rethinkdb" target="_blank" rel="external">https://github.com/rethinkdb/rethinkdb</a></li>
+<li><a href="https://rethinkdb.com" target="_blank" rel="noopener">RethinkDB: the open-source database for the realtime web</a></li>
+<li><a href="https://rethinkdb.com/docs/" target="_blank" rel="noopener">RethinkDB Documentation</a></li>
+<li><a href="https://github.com/rethinkdb/rethinkdb" target="_blank" rel="noopener">https://github.com/rethinkdb/rethinkdb</a></li>
 </ul>
 <p><img src="http://img.l.jifangcheng.com/rethinkdb-2.png" alt=""></p>
 
@@ -530,10 +568,10 @@
             
             
             <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">4</span>
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
@@ -542,7 +580,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -634,12 +672,12 @@
 
 
 <div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
     NexT.Mist
   </a>
   <span class="icp">
