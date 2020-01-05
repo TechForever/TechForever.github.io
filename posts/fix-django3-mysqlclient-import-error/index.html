@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Tech Forever,博客,JavaScript,html5,css3,TyepScript,ES6,ES7,Python,Go,Django,Mysql,Mongo,ElasticsearchLinux,NodeJs,Ubuntu" />
+  <meta name="keywords" content="Tech Forever,Django,mysqlclient,error,1.3.13,required,you,have,0.9.3,异常,解决方案" />
 
 
 
@@ -96,15 +96,19 @@
 
 
 
-<meta name="description" content="Tech Forever是一个技术团队，专注于互联网技术。团队主要技术栈:Python,Go,Javascript,TypeScript,Swift">
-<meta name="keywords" content="Tech Forever,博客,JavaScript,html5,css3,TyepScript,ES6,ES7,Python,Go,Django,Mysql,Mongo,ElasticsearchLinux,NodeJs,Ubuntu">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tech Forever">
-<meta property="og:url" content="https:&#x2F;&#x2F;blog.yuntianti.com&#x2F;categories&#x2F;other&#x2F;index.html">
+<meta name="description" content="Django 近期发布了3.0版本，其中首度支持了asyncio让人兴奋, 为此引入了新的网关接口协议ASGI。按异步IO的实现原理，即使使用ASGI替代WSGI部署Web应用，如果使用了一些同步库，肯定还是会阻塞IOLoop的，使应用失去异步特性。但是Django的应用场景很多是有状态的，不得不使用一些带状态的库和函数。比如在MySQL中执行事务，或一些前后状态依赖的逻辑，就不太可能异步出去。个">
+<meta name="keywords" content="Tech Forever,Django,mysqlclient,error,1.3.13,required,you,have,0.9.3,异常,解决方案">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Django3 中遇到django.core.exceptions.ImproperlyConfigured mysqlclient 1.3.13 or newer is required; you have 0.9.3.异常的解决方案">
+<meta property="og:url" content="https:&#x2F;&#x2F;blog.yuntianti.com&#x2F;posts&#x2F;fix-django3-mysqlclient-import-error&#x2F;index.html">
 <meta property="og:site_name" content="Tech Forever">
-<meta property="og:description" content="Tech Forever是一个技术团队，专注于互联网技术。团队主要技术栈:Python,Go,Javascript,TypeScript,Swift">
+<meta property="og:description" content="Django 近期发布了3.0版本，其中首度支持了asyncio让人兴奋, 为此引入了新的网关接口协议ASGI。按异步IO的实现原理，即使使用ASGI替代WSGI部署Web应用，如果使用了一些同步库，肯定还是会阻塞IOLoop的，使应用失去异步特性。但是Django的应用场景很多是有状态的，不得不使用一些带状态的库和函数。比如在MySQL中执行事务，或一些前后状态依赖的逻辑，就不太可能异步出去。个">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https:&#x2F;&#x2F;media.yuntianti.com&#x2F;40D6DA50-6BCD-43F6-938D-6F44F68CDDFC.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;media.yuntianti.com&#x2F;BA2CE51F-E6EA-4F74-95EA-EC8C4EB98263.png">
+<meta property="og:updated_time" content="2020-01-05T00:54:25.000Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;media.yuntianti.com&#x2F;40D6DA50-6BCD-43F6-938D-6F44F68CDDFC.png">
 
 
 
@@ -133,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="https://blog.yuntianti.com/categories/other/"/>
+  <link rel="canonical" href="https://blog.yuntianti.com/posts/fix-django3-mysqlclient-import-error/"/>
 
 
 
 
 
-  <title>分类: other | Tech Forever</title>
+  <title>Django3 中遇到django.core.exceptions.ImproperlyConfigured mysqlclient 1.3.13 or newer is required; you have 0.9.3.异常的解决方案 | Tech Forever</title>
   
 
 
@@ -164,7 +168,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -268,55 +272,187 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>other<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.yuntianti.com/posts/fix-django3-mysqlclient-import-error/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tech Forever">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tech Forever">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/posts/use-Hexo/" itemprop="url">
-              
-                <span itemprop="name">使用 Hexo 写博客</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Django3 中遇到django.core.exceptions.ImproperlyConfigured mysqlclient 1.3.13 or newer is required; you have 0.9.3.异常的解决方案</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-04T14:05:08+08:00"
-              content="2016-07-04" >
-          07-04
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-04T21:00:00+08:00">
+                2019-01-04
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Django 近期发布了3.0版本，其中首度支持了asyncio让人兴奋, 为此引入了新的网关接口协议ASGI。<br>按异步IO的实现原理，即使使用ASGI替代WSGI部署Web应用，如果使用了一些同步库，肯定还是会阻塞IOLoop的，使应用失去异步特性。<br>但是Django的应用场景很多是有状态的，不得不使用一些带状态的库和函数。比如在MySQL中执行事务，或一些前后状态依赖的逻辑，就不太可能异步出去。<br>个人觉得可以用Django路由对同步/异步部分逻辑做划分，部署时启动多个端口或部署到多个节点上，再用nginx基于path把同步/异步请求反向代理到不同的upstream上，避免同步逻辑阻塞异步逻辑，以此发挥ASGI的异步高并发特性。</p>
+<hr>
+<p>下面进入正题:<br>安装Django3后不想折腾mysqlclient那堆库文件，直接装了pymysql替代mysqlclient。还是老办法，<code>__init__.py</code> 中patch一下:</p>
+<pre><code>import pymysql
+pymysql.install_as_MySQLdb()</code></pre><p>启动项目出现以下异常:</p>
+<pre><code>raise ImproperlyConfigured(&apos;mysqlclient 1.3.13 or newer is required; you have %s.&apos; % Database.__version__)
+django.core.exceptions.ImproperlyConfigured: mysqlclient 1.3.13 or newer is required; you have 0.9.3.</code></pre><a id="more"></a>
+
+<p>看来是Django3对mysqlclient的要求提高了: <code>1.3.13</code>. 但pymysql的版本没有跟上。<br>看了下tracelog指向的异常抛出处的代码, 发现如下代码片段:<br><img src="https://media.yuntianti.com/40D6DA50-6BCD-43F6-938D-6F44F68CDDFC.png" alt=""><br>果然是有个版本判断并raise了异常，而且校验的是Database库的version_info属性。<br>那pymysql中的version_onfo属性是怎么返回的呢？找到pymysql源码，发现如下片段:<br><img src="https://media.yuntianti.com/BA2CE51F-E6EA-4F74-95EA-EC8C4EB98263.png" alt=""><br>实际上pymysql版本号是 0.9.3，却明目张胆篡改version_info欺骗Django😂。这样一来就简单了，patch一下这个属性就行了嘛， 修改<code>__init__.py</code>，多插入一行代码:</p>
+<pre><code>import pymysql
+pymysql.version_info = (1, 3, 13, &quot;final&quot;, 0)
+pymysql.install_as_MySQLdb()</code></pre><p>保存后启动项目成功。<br>该方案只是个兼容方案，不确定Django3是否依赖mysqlclient的新特性，因此生产环境还是建议部署mysqlclient，而非pymysql。</p>
+<ul>
+<li>mysqlclient与pymysql区别是什么？ <ul>
+<li>mysqlclient是mysql官方提供的Python SDK，安装时依赖mysql-dev与python-dev相关的库函数完成当前系统平台的编译，因为使用大量C库，性能会比pymysql优秀得多。SDK更新和维护也有官方保障。</li>
+<li>pymysql是第三方在MySQL通信协议上实现的SDK，所有与数据库的交互都是通过MySQL独有的通信协议完成，性能上会比mysqlclient有劣势。且版本更新可能滞后，且维护不一定到位。但好处就是<code>pip install</code>安装很容易，不像mysqlclient先要把编译依赖的C库装好，在一些建档任务和开发环境快速搭建上有优势。</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Django/" rel="tag"># Django</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/initd-rcd-systemd/" rel="next" title="init.d + rc.d VS systemd Ubuntu服务进程管理与开机自启动">
+                <i class="fa fa-chevron-left"></i> init.d + rc.d VS systemd Ubuntu服务进程管理与开机自启动
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -324,6 +460,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
+    
+  </div>
+
 
         </div>
         
@@ -548,10 +690,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
